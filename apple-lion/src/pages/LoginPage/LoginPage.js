@@ -38,6 +38,7 @@ function LoginPage() {
       isAuthenticated();
     });
   };
+
   return (
     <div className="pageWrapper">
       <div className="auth-wrapper">
@@ -45,7 +46,7 @@ function LoginPage() {
         <form onSubmit={handleSubmit}>
           <input
             onChange={handleEmailChange}
-            placeholder="Apple ID"
+            placeholder="Apple Id"
             type="email"
             name="email"
             value={email}

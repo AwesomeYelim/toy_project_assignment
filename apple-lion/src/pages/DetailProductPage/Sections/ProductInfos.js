@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
-import "./ProductInfo.css";
+import "./ProductInfos.css";
 import { AuthContext } from "../../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import clayful from "clayful/client-js";
-import { Alert } from "bootstrap";
+import { Alert } from "react-bootstrap";
 
-function ProductInfo({ detail }) {
+function ProductInfos({ detail }) {
   const navigate = useNavigate();
   const [count, setCount] = useState(1);
   const [show, setShow] = useState(false);
@@ -32,9 +32,9 @@ function ProductInfo({ detail }) {
 
     let payload = {
       product: detail._id,
-      variant: detail.variant[0]._id,
+      variant: detail.variants[0]._id,
       quantity: count,
-      shippingMethod: detail.shippingMethod[0]._id,
+      shippingMethod: detail.shipping.methods[0]._id,
     };
 
     let options = {
@@ -97,14 +97,14 @@ function ProductInfo({ detail }) {
         <h3>총 상품 금액: {detail.price?.original.raw * count}원</h3>
         <br />
         <div
-          className="product-info-action"
           onClick={() => handleActionClick("cart")}
+          className="product-info-action"
         >
           장바구니에 담기
         </div>
         <div
-          className="product-info-action"
           onClick={() => handleActionClick("pay")}
+          className="product-info-action"
         >
           바로구매
         </div>
@@ -113,4 +113,4 @@ function ProductInfo({ detail }) {
   );
 }
 
-export default ProductInfo;
+export default ProductInfos;

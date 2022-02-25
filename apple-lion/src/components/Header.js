@@ -26,6 +26,8 @@ function Header() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="nav-justified w-100 nav-fill">
               <Nav.Link href="/">Iphone</Nav.Link>
+              <Nav.Link href="/">Ipad</Nav.Link>
+              <Nav.Link href="/">Support</Nav.Link>
 
               {isAuth ? (
                 <>
@@ -37,7 +39,7 @@ function Header() {
               ) : (
                 <>
                   <Nav.Link href="/login">Login</Nav.Link>
-                  <Nav.Link href="/user/cart">
+                  <Nav.Link href="/login">
                     <img src={cart} alt="cart" />
                   </Nav.Link>
                 </>

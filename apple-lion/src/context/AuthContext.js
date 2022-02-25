@@ -1,7 +1,6 @@
 import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import clayful from "clayful/client-js";
-
 export const AuthContext = createContext();
 
 const AuthContextProvider = ({ children }) => {
@@ -10,7 +9,6 @@ const AuthContextProvider = ({ children }) => {
 
   const isAuthenticated = () => {
     let Customer = clayful.Customer;
-
     let options = {
       customer: localStorage.getItem("accessToken"),
     };
@@ -25,24 +23,24 @@ const AuthContextProvider = ({ children }) => {
 
       let data = result.data;
 
-      if(data.autenticated) {
-          setIsAuth(true);
-      }else {
-          setIsAuth(false);
+      if (data.authenticated) {
+        setIsAuth(true);
+      } else {
+        setIsAuth(false);
       }
     });
   };
 
   const signOut = () => {
-      setIsAuth(false);
-      localStorage.removeItem("accessToken");
-      navigate('login');
+    setIsAuth(false);
+    localStorage.removeItem("accessToken");
+    navigate("/login");
   };
 
   const AuthContextData = {
     isAuth,
     isAuthenticated,
-    signOut
+    signOut,
   };
   return (
     <AuthContext.Provider value={AuthContextData}>
