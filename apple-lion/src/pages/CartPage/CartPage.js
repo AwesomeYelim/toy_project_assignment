@@ -41,6 +41,7 @@ function CartPage() {
   };
 
   const buttonHandler = (type, index) => {
+    console.log('cart', {...cart})
     let newCart = { ...cart };
 
     if (type === "plus") {

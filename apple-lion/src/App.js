@@ -7,6 +7,8 @@ import AuthContextProvider from "./context/AuthContext";
 import Header from "./components/Header";
 import DetailProductPage from "./pages/DetailProductPage/DetailProductPage";
 import CartPage from "./pages/CartPage/CartPage"
+import PaymentPage from "./pages/PaymentPage/PaymentPage"
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/product/:productId" element={<DetailProductPage />} />
         <Route path="/user/cart" element={<CartPage />} />
+        <Route path="/payment" element={<PaymentPage />} />
       </Routes>
   </AuthContextProvider>
   );
