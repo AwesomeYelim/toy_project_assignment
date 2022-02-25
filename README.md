@@ -6,6 +6,7 @@
   - join page API 연결 및 구현
   - login page API 연결 및 구현
   - main page 구현
-  - cart page 구현중
-  - 
+  - cart page API 연결 및구현
+  - payment page API 연결 및 구현
+    - react-daum-postcode 라이브러리 구현
 
