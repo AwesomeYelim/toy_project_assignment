@@ -13,5 +13,5 @@
   - payment page API 연결 및 구현
     - react-daum-postcode 라이브러리 구현
   - order page 구현 및 결제 페이지 api 전송 연결
-  - (api 전송 횟수 초과로 21.3.2 일자로 초기화됨)
+
 
