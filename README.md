@@ -3,7 +3,7 @@
   - React 로 구현한 기본 TodoList app
 
 ## 02. news_viewer 
-  - news API를 받아와 카테고리 별로 component시켜 정리하였습니다.
+  - news API를 받아와 카테고리 별로 component시켜 정리
 
 ## 03. Apple_page_project(clayful_API 이용한 쇼핑몰 페이지 구)
   - join page API 연결 및 구현
