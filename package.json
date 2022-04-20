@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "create-react-app": "^5.0.0"
+    "create-react-app": "^5.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "yarn": "^1.22.18"
   }
 }
