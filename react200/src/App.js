@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ClassPrototype from './R012_Class&Prototype.js';
+import ArrowFunc from './R013_ArrowFunction';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div>
       <h1>Start React 200!</h1>
       <p>HTML 적용하기</p>
-      <ClassPrototype />
+      <ArrowFunc />
     </div>
   );
 }
