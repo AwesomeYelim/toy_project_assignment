@@ -5,9 +5,12 @@
   - React 로 구현한 기본 TodoList app
 
 ## 02. news_viewer 
-  - news API를 받아와 카테고리 별로 component시켜 정리
+  - news API를 사용한 카테고리별 Newsviewer 
 
-## 03. Apple_page_project(clayful_API 이용한 쇼핑몰 페이지 구현함)
+## 03. Calendar_app 구현
+  - Dayjs 라이브러리를 사용한 Calendar_app 구현
+
+## 04. Apple_page_project(clayful_API 이용한 쇼핑몰 페이지 구현함)
   - join page API 연결 및 구현
   - login page API 연결 및 구현
   - main page 구현
