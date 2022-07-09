@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ForEach from "./R014_ForEach"
+import Map from "./R015_Map"
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div>
       <h1>Start React 200!</h1>
       <p>CSS 적용하기</p>
-      <ForEach />
+      <Map />
     </div>
   );
 }
