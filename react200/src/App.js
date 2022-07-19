@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import PropsRequired from "./R021_PropsRequired";
+import PropsDefalut from "./R022_PropsDefalut";
 
 function App() {
   return (
     <div>
       <h1>Start React 200!</h1>
       <p>CSS 적용하기</p>
-      <PropsRequired ReactNumber={200} />
+      <PropsDefalut ReactNumber={200} />
     </div>
   );
 }
