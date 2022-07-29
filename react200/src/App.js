@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import PureComponentClass from "./R028_PureComponentClass";
+import FunctionComponent from "./R030_FunctionComponent";
 
 function App() {
   return (
     <div>
       <h1>Start React 200!</h1>
       <p>CSS 적용하기</p>
-      <PureComponentClass />
+      <FunctionComponent contents = "[THIS IS FunctionComponent]"/>
     </div>
   );
 }
