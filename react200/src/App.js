@@ -1,12 +1,12 @@
 import React from "react";
 // import "./App.css";
-import FetchPost from "./R060_FetchPost"
+import AxiosGet from "./R061_AxiosGet"
 
 function App() {
   return (
     <div>
       <h1>Start React 200!</h1>
-      <FetchPost />
+      <AxiosGet />
     </div>
   );
 }
