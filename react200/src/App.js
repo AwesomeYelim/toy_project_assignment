@@ -1,11 +1,11 @@
 import React from "react";
-import ContextApi from "./Context/R077_ContextApi"
+import Currying from "./R074_ReactCurrying"
 
 function App() {
   return (
     <div>
       <h1>Start React 200!</h1>
-      <ContextApi />
+      <Currying />
     </div>
   );
 }
