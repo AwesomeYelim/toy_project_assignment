@@ -1,11 +1,12 @@
 import React from "react";
-import Currying from "./R074_ReactCurrying"
+import StrAddButton from "./StrAddButton"
 
 function App() {
   return (
     <div>
       <h1>Start React 200!</h1>
-      <Currying />
+      <span>{this.props.store.getState().data.str}</span><br/>
+      <StrAddButton store={this.props.store}/>
     </div>
   );
 }
