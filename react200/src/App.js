@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Connect } from "react-redux";
+import { connect } from "react-redux";
 import StrAddButton from "./StrAddButton";
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
         <br /> */}
         <span>{this.props.str}</span><br/>
         {/* <StrAddButton store={this.props.store} /> */}
-        <StrAddButton AppProps='200'/>
+        <StrAddButton AppProp='200'/>
       </div>
     );
   }
