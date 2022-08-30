@@ -18,7 +18,7 @@ class App extends Component {
 }
 
 let mapStateToProps = (state, props) =>{
-  console.log('Props from index.js : ' + props.indexProp)
+  console.log('Props from index.js : ' + props.indexProps)
   return {
     str: state.data.str,
   }
