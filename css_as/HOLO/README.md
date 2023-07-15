@@ -1,4 +1,4 @@
-# click 👉 <a href = "https://awesomeyelim.github.io/HOLO/" >HOLO</a>
+<!-- # click 👉 <a href = "https://awesomeyelim.github.io/HOLO/" >HOLO</a> -->
   - 팀 프로젝트 
     - 참여인원 : 3명
     - 개요 : 여행은 혼자서도 가능하다 ! 라는 취지의 HOLO 라는 여행 브랜드 기획 및 웹페이지 구현

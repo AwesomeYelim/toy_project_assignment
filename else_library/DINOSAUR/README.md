@@ -1,4 +1,4 @@
-# Click 👉 <a href="https://awesomeyelim.github.io/DINOSAUR/"> DINOSAUR </a>
+<!-- # Click 👉 <a href="https://awesomeyelim.github.io/DINOSAUR/"> DINOSAUR </a> -->
 
 - 기간 : 21.12.21(화) ~ 22(수)
 - 목적 : 공룡정보전달 관련 랜딩 페이지 제작

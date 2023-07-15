@@ -1,4 +1,4 @@
-# Click 👉 <a href="https://awesomeyelim.github.io/LEGOGAME/">LEGOGAME</a>
+<!-- # Click 👉 <a href="https://awesomeyelim.github.io/LEGOGAME/">LEGOGAME</a> -->
 - 기간 : 21.12.21
 - 사용스택 : javascript
 - 사용플러그인 : Three.js(webGL기반), gsap..

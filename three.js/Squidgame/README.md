@@ -1,4 +1,4 @@
-# Click 👉 <a href="https://awesomeyelim.github.io/Squidgame_clone/">Squidgame</a>
+<!-- # Click 👉 <a href="https://awesomeyelim.github.io/Squidgame_clone/">Squidgame</a> -->
 - 기간 : 21.12.13
 - 사용스택 : javascript
 - 사용플러그인 : Three.js(webGL기반)

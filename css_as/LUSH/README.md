@@ -1,4 +1,4 @@
-# Click 👉 <a href ="https://awesomeyelim.github.io/LUSH/">LUSH</a>
+<!-- # Click 👉 <a href ="https://awesomeyelim.github.io/LUSH/">LUSH</a> -->
 - 기간 : 21.9.16
 - 목적 : LUSH 메인페이지 제작
 - 반응형 :O.
