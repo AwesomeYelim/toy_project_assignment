@@ -1,0 +1,556 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "spoqaHanSansNeo_R";
+    src: url("../assets/SpoqaHanSansNeo-Regular.otf");
+}
+@font-face {
+    font-family: "spoqaHanSansNeo_B";
+    src: url("../assets/SpoqaHanSansNeo-Bold.otf");
+}
+
+/* Reset */
+* {padding: 0;margin: 0;box-sizing: border-box;}
+a {text-decoration: none; color: #231F20;}
+ul {list-style: none;}
+img {border: none; vertical-align: middle;}
+body {width: 100%; height: 100%; }
+
+/* color */
+/* main - #6EB43F (green) #231F20(black) #fff sub - #FCE0A8(orange) #F2F3EE(grey) */
+
+/* Paragraphy */
+body {font-family: "spoqaHanSansNeo_R"; color: #231F20;}
+#wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* LayOuts */
+.container {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    padding: 25px 0;
+    position: fixed;
+    width: 100%;
+    height: 105px;
+    background: transparent;
+    z-index: 999;
+}
+.m_logo {
+    display: none;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+}
+nav ul li {
+    flex: 1;
+}
+nav ul li a {
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    text-transform: uppercase;
+}
+nav ul li a span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    transition: 0.35s;
+    transform-origin: 50% 0;
+}
+nav ul li a::after {
+    content: attr(data-menu);
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: scaleY(0);
+    transition: 0.35s;
+    padding-top: 5px;
+}
+
+/* hover */
+nav ul li a:hover span {
+    transform: scaleY(0);
+}
+nav ul li a:hover::after {
+    top: 0;
+    transform: scaleY(1);
+    color: #6EB43F;
+}
+nav ul li a.on span {
+    color: #6EB43F;
+    transform: scaleY(0);
+}
+nav ul li a.on::after {
+    top: 0;
+    transform: scaleY(1);
+    color: #6EB43F;
+}
+
+
+/* section1 */
+.section1 {
+    margin-bottom: 190px;
+    padding-top: 100px;
+}
+.section1 div{
+    margin: 0 auto;
+    overflow: hidden;
+}
+.section1 a{
+    display: block;
+    text-align: center;
+}
+.section1 .mainImg {
+    position: relative;
+    animation: fadeIn 1s linear forwards;
+}
+
+.section1 .mainImg::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(0,0,0,.2);
+}
+.section1 .mainImg .preload {
+    width: 100%;
+}
+.mainTxt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    z-index: 5;
+    line-height: 2;
+}
+.mainTxt .main_title {
+    display: inline-block;
+    font-family: "spoqaHanSansNeo_B";
+    font-size: 6.25rem;
+    opacity: 0; 
+    transform: translateY(100px);
+    animation: slideUp 0.75s 0.5s linear forwards;
+}
+.mainTxt .main_subtitle {
+    display: inline-block;
+    font-size: 1.25rem;
+    opacity: 0; 
+    transform: translateY(100px);
+    animation: slideUp 0.75s 0.5s linear forwards;
+} 
+.mainTxt .main_subtitle span {
+    font-size: 1.375rem;
+    font-weight: bold;
+}
+
+/* animation */
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes slideUp {
+    0% {opacity: 0; transform: translateY(100px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+/* section2 */
+
+.section2{height: 300px;}
+
+.section2 div{
+    width: 80%;
+    border-bottom: 2px solid black;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.section2 a img{
+    width: 100%;
+}
+
+.section2 a{
+    width: 50%;
+    float: left;
+    font-size: 1.2em;   
+}
+.section2 a:nth-child(2){
+    padding: 0 7%;
+    margin-top: 15%;
+}
+
+.section2 a span{
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+
+/* section3-초록색 중간네비 */
+.menutab{
+    height: 20%;
+}
+.menutab article .greenbox{ 
+    /* position: fixed; */
+    width: 70%;
+    height: 90px;
+    background-color:#6EB43F;
+    border-radius: 50px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.greenbox a{
+    margin-top: 0.5%;
+    padding: 15px 0;
+    height: 80px;
+    width: 11.5%;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.greenbox a img{
+    height: 50px;
+}
+
+
+/* 메인이미지 */
+
+#main{
+    width: 100%;
+    margin-bottom: 400px;
+}
+#main article .mainContents{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 60px;
+    background: white;
+}
+#main article > div {
+    margin: 0 auto;
+}
+#main article .contentsImg {
+    width: 40%;
+    margin-right: 5%;
+    text-align: center;
+}
+#main article .contentsImg img {
+    width: 100%;
+}
+#main article .contentsTxt {
+    width: 50%;
+}
+#main article .contentsTxt h2 {
+    font-size: 2.1875rem;
+    line-height: 80px;
+}
+#main article .contentsTxt h2 em {
+    font-style: normal;
+    font-size: 1.25rem;
+    margin-left: 1%;
+    color: #A8A8A8;
+}
+#main article .contentsTxt p {
+    margin-top: 50px;
+    line-height: 1.7;
+    font-size: 1.0625rem;
+}
+#main article .button{
+    width: 70%;
+    height: 100%;
+    text-align: center;
+    background: #6eb43fd0;
+    padding: 20px 0;
+    color: white;
+    cursor: pointer;  
+}
+#main article .button i{
+    margin-left: 1%;
+    transition: 0.35s;
+ }
+#main article .button p {
+    display: inline-block;
+}
+#main article .button.on i {
+    transform: rotate(-180deg);
+}
+#main article .productList{
+    width: 70%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2%;
+    
+}
+.item {
+    display: flex;
+    padding: 10px;
+    height: 200px;
+    background: #fff;
+}
+.item img {
+    width: 160px;
+    margin-right: 10px;
+}
+.itemDetail {
+    padding: 5px;
+    position: relative;
+}
+.itemDetail h2.name {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+.itemDetail p.subcrib {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: #A8A8A8;
+}
+.itemDetail p.subcrib span {
+    display: block;
+    color: rgb(206, 51, 51);
+    margin-bottom: 5px;
+}
+.itemDetail span.price {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    display: block;
+    text-align: right;
+    color: #555;
+    font-size: 0.8125rem;
+}
+.option {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #A8A8A8;
+}
+/* footer */
+footer {
+    width: 100%;
+    height: 220px;
+    background: #231F20;
+    padding-top: 18px;
+    text-align: center;
+    color: #A8A8A8;
+}
+footer .footer_top > ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+footer .footer_top > ul > li > a {
+    color: #F2F3EE;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+footer .footer_top li a {
+    display: block;
+    padding: 5px;
+    font-size: 0.625rem;
+}
+.subList a {
+    color: #A8A8A8;
+}
+
+footer .footer_bottom {
+    font-size: 0.625rem;
+    margin-top: 30px;
+ }
+ /* topBtn */
+.topBtn {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+.top {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px; 
+    border: 2px solid #6EB43F;
+    text-indent: -9999em;
+    border-radius: 50%;
+    background: url("../images/topArrow.png") no-repeat center;
+}
+/* mainBtn */
+.mainBtn {
+    position: fixed;
+    z-index: 55;
+    bottom: 50px;
+    left: 66px;
+}
+.mainBtn .logo {
+    width: 106px;
+    height: 116px;
+    transition: 0.35s;
+}
+.mainBtn .logo a {
+    display: block;
+    text-indent: -9999em;
+    width: 100%;
+    height: 100%;
+    background: url("../images/logo.png") no-repeat center / cover;
+}
+
+/* ******************************************************************* 태블릿 화면 css */
+@media screen and (max-width: 1124px) {
+    nav ul li a {
+        font-size: 0.9375rem;
+    }
+    /* section1 */
+    .mainTxt .main_title {
+        font-size: 4.375rem;
+    }
+    .mainTxt .main_subtitle  {
+        font-size: 1.125rem;
+    }
+    .mainTxt .main_subtitle span {
+        font-size: 1.25rem;
+    }
+    /* section3 */
+    .itemDetail h2.name {
+        font-size: 1rem;
+    }
+    .itemDetail p.subcrib {
+        font-size: 0.6875rem;
+    }
+    .itemDetail span.price {
+        font-size: 0.8125rem;
+    }
+    /* top */
+    .mainBtn .logo {
+        width: 80px;
+        height: 88px;
+    }
+    .mainBtn .logo a {
+        background: url("../images/logo_tab.png") no-repeat center / cover;
+    }
+}
+
+/* ******************************************************************* 모바일 화면 css */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px 0 10px;
+        background: #fff;
+    }
+    .m_logo {
+        display: block;
+    }
+    .m_logo a {
+        display: block;
+        text-indent: -9999em;
+        width: 300px;
+        margin: 0 auto;
+        background: url("../images/ss_logo.png") no-repeat center / contain;
+
+    }
+    nav ul {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+    .secTitle .secText {
+        font-size: 1.0625rem;
+    }
+     /* section1 */
+     .section1 {
+         padding-top: 200px;
+         margin-bottom: 50px;
+     }
+    .mainTxt .main_title {
+        font-size: 2.8125rem;
+    }
+    .mainTxt .main_subtitle  {
+        font-size: 0.9375rem;
+    }
+    .mainTxt .main_subtitle span {
+        font-size: 1rem;
+    }   
+    .section1 a img{
+        width: 100%;
+    }
+    /* section2 */
+    .section2 div{
+        width: 100%;
+    }
+
+    .menutab article .greenbox{ 
+        width: 100%;
+        border-radius: 0px;
+    }
+    #main {
+        margin-bottom: 1600px;
+    }
+    #main article .mainContents {
+        flex-direction: column;
+        width: 100%;
+    }
+    #main article .contentsImg {
+        width: 100%;
+        margin-right: 0;
+    }
+    #main article .contentsImg img {
+        width: 70%;
+    }
+    #main article .contentsTxt{
+        width: 70%;
+        text-align: center;
+    }
+    #main article .contentsTxt p {
+        font-size: 0.9375rem;
+        
+    }
+    #main article .productList {
+        grid-template-columns: 1fr;
+        
+    }
+    #main article .productList {
+        width: 90%;
+    }
+    .item {
+        height: 200px;
+    }
+    
+    .itemDetail h2.name {
+        font-size: 1.25rem;
+    }
+    .itemDetail p.subcrib {
+        font-size: 0.8125rem;
+    }
+    .itemDetail span.price {
+        font-size: 1rem;
+        font-size: 0.6875rem;
+    }
+    .option {
+        top: 10px;
+        font-size: 0.75rem;
+    }
+    /* Btn */
+        .mainBtn {
+            display: none;
+        }
+    }

@@ -1,0 +1,363 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "spoqaHanSansNeo_R";
+    src: url("../assets/SpoqaHanSansNeo-Regular.otf");
+}
+@font-face {
+    font-family: "spoqaHanSansNeo_B";
+    src: url("../assets/SpoqaHanSansNeo-Bold.otf");
+}
+
+/* Reset */
+* {padding: 0;margin: 0;box-sizing: border-box;}
+a {text-decoration: none; color: #231F20;}
+ul {list-style: none;}
+img {border: none;}
+body {width: 100%; height: 100%;}
+
+/* color */
+/* main - #6EB43F (green) #231F20(black) #fff sub - #FCE0A8(orange) #F2F3EE(grey) */
+
+/* Paragraphy */
+body {font-family: "spoqaHanSansNeo_R"; color: #231F20;}
+#wrap{
+    position: relative;
+}
+
+/* LayOuts */
+.container {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    padding: 25px 0;
+    position: fixed;
+    width: 100%;
+    height: 105px;
+    background: transparent;
+    z-index: 999;
+}
+.m_logo {
+    display: none;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+}
+nav ul li {
+    flex: 1;
+}
+nav ul li a {
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    text-transform: uppercase;
+}
+nav ul li a span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    transition: 0.35s;
+    transform-origin: 50% 0;
+}
+nav ul li a::after {
+    content: attr(data-menu);
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: scaleY(0);
+    transition: 0.35s;
+    padding-top: 5px;
+}
+
+/* hover */
+nav ul li a:hover span {
+    transform: scaleY(0);
+}
+nav ul li a:hover::after {
+    top: 0;
+    transform: scaleY(1);
+    color: #6EB43F;
+}
+nav ul li a.on span {
+    color: #6EB43F;
+    transform: scaleY(0);
+}
+nav ul li a.on::after {
+    top: 0;
+    transform: scaleY(1);
+    color: #6EB43F;
+}
+
+
+section{
+    max-width: 1180px;
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    padding: 200px 0;
+}
+
+
+/* section1 */
+
+.section1 div{
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.section1 a img{
+    width: 80%;
+}
+.section1 a{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5em;   
+}
+.section1 a:nth-child(2){
+    margin-left: -60px;
+}
+.section1 a span {
+    letter-spacing: 7.5px;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+/* section2 */
+
+.section2{
+    height: 400px;
+}
+
+.section2 a{
+    width: 500px;
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 auto;
+    letter-spacing: 7px;
+    font-weight: 600;
+}
+
+.section2 a img {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #6EB43F;
+    width: 100%;
+    margin: 10px auto;
+}
+
+/* section3 */
+
+.section3{
+    height: 400px;
+}
+
+.section3 a{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.section3 a img {
+    opacity: 0.8;
+    width: 70%;
+    margin-bottom: 100px;
+}
+
+hr{
+    width: 100px;
+    margin: 0 auto;
+    border: 1px solid #6EB43F;
+}
+
+
+/* section4 */
+
+.section4{
+    margin-top: 250px;
+    height: 1400px;
+}
+.section4 div{
+    line-height: 200px;
+    padding: 35px;
+    width: 70%;
+    height: 200px;
+    margin: 0 auto;
+    background: #fce0a8b4;
+}
+
+.section4 h2{
+    text-align: center;
+    font-size: 1em ;
+    letter-spacing: 6px;
+    margin-bottom: 300px;
+}
+
+.section4 h2 span{
+    font-size: 1.8em;
+    font-weight: 2000;
+    letter-spacing: 4px;
+}
+.section4 a{
+    display: block;
+    width: 25%;
+    padding-left: 5%;
+    margin: 0 auto;
+    text-align: center;
+    float: left;
+}
+.section4 a img {
+    width: 100%;
+}
+
+
+
+/* footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #231F20;
+    padding-top: 18px;
+    text-align: center;
+    color: #A8A8A8;
+}
+footer .footer_top > ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+footer .footer_top > ul > li > a {
+    color: #F2F3EE;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+footer .footer_top li a {
+    display: block;
+    padding: 5px;
+    font-size: 0.625rem;
+}
+.subList a {
+    color: #A8A8A8;
+}
+
+footer .footer_bottom {
+    font-size: 0.625rem;
+    margin-top: 30px;
+ }
+ /* topBtn */
+.topBtn {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+.top {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px; 
+    border: 2px solid #6EB43F;
+    text-indent: -9999em;
+    border-radius: 50%;
+    background: url("../images/topArrow.png") no-repeat center;
+}
+/* mainBtn */
+.mainBtn {
+    position: fixed;
+    z-index: 55;
+    bottom: 50px;
+    left: 66px;
+}
+.mainBtn .logo {
+    width: 106px;
+    height: 116px;
+    transition: 0.35s;
+}
+.mainBtn .logo a {
+    display: block;
+    text-indent: -9999em;
+    width: 100%;
+    height: 100%;
+    background: url("../images/logo.png") no-repeat center / cover;
+}
+/* ******************************************************************* 태블릿 화면 css */
+@media screen and (max-width: 1124px) {
+    
+    nav ul li a {
+        font-size: 0.9375rem;
+    }
+    /* top */
+    .mainBtn .logo {
+        width: 80px;
+        height: 88px;
+    }
+    .mainBtn .logo a {
+        background: url("../images/logo_tab.png") no-repeat center / cover;
+    }
+}
+
+/* ******************************************************************* 모바일 화면 css */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px 0 10px;
+        background: #fff;
+    }
+    .m_logo {
+        display: block;
+    }
+    .m_logo a {
+        display: block;
+        text-indent: -9999em;
+        width: 300px;
+        margin: 0 auto;
+        background: url("../images/ss_logo.png") no-repeat center / contain;
+
+    }
+    nav ul {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+    .secTitle .secText {
+        font-size: 1.0625rem;
+    }
+
+    .section1 a{
+        display: block;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .section1 a:nth-child(2){
+        margin-top: 50px;
+        margin-right: -70px;
+    }
+
+    .section3 a img {
+        width: 100%;
+    }
+
+    .section4 div{
+        width: 100%;
+    }
+    .section1 a:nth-child(2){
+    margin-left: -60px;
+}
+    
+    /* Btn */
+        .mainBtn {
+            display: none;
+        }
+    }

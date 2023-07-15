@@ -1,0 +1,534 @@
+body{
+    background: #001EBE;
+    font-size: 12px;
+}
+.wrap{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sign_logo{
+    position: fixed;
+    width: 30px;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+section{
+    position: absolute;
+    display: block;
+    height: 50%;
+    /* border: 0.5px solid #ccc; */
+}
+a, .outer, article{
+    position: absolute;
+    display: block;
+    text-decoration: none;
+}
+
+p{
+    position: absolute;
+    padding: 7px;
+    font-size: 1em;
+    line-height: 1em;
+    background-color:#151515ac;
+    color: rgb(235, 235, 235);
+    /* border: 1px solid transparent; */
+    transform: rotate(-90deg);
+    transition: all .2s;
+    z-index: -1;
+}
+p:hover{
+    /* border: 1px solid #ccc; */
+    background-color: #2c40b5;
+    color: 1px solid #ccc;
+    z-index: 99;
+}
+
+/* 이력서 */
+
+.resume{
+    position: relative;
+    width: 35%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.resume a{
+    top: 0;
+    right: 30px;
+    width: 200px;
+    height: 48%;;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.resume img{
+    margin: 6%;
+}
+.resume .y_face{
+    width: 70%;
+}
+.resume p{
+    bottom: 13px;
+    left: -40px;
+}
+
+/* 제이쿼리 프젝 */
+
+.project_1{
+    width: 65%;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+.project_1 .outer{
+    left: 0;
+    bottom: 15px;
+    width: 100%;
+    height: 210px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.project_1 .outer p{
+    transform: rotate(0deg);
+    top: -26px;
+    left: 0;
+}
+.project_1 .outer .swiper-wrapper{
+    position: absolute;
+}
+.project_1 .outer .swiper-wrapper:focus-within{
+    animation: none;
+}
+
+
+.project_1 .outer .swiper-wrapper a{
+    width: 390px;
+    overflow: hidden;
+}
+.outer .swiper-wrapper a:nth-child(2){
+    width: 405px;
+}
+.outer .swiper-wrapper a:nth-child(3){
+    width: 369px;
+}
+.outer .swiper-wrapper a:nth-child(4){
+    width: 386px;
+}
+.outer .swiper-wrapper a:nth-child(5){
+    width: 386px;
+}
+.project_1 .outer a > video{
+    width: 100%;
+    /* height: 100%; */
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.project_1 .outer div a::after{
+    position: absolute;
+    display: block;
+    opacity: 0;
+    content: " ";
+    padding: 5%;
+    top: 2%;
+    right: 2%;
+    width: 44%;
+    height: 96%;
+    color: #fff;
+    background-color: #000000;
+    z-index: 99999;
+    transition: all 0.5s;
+    box-sizing: border-box;
+    white-space: pre;
+}
+.project_1 .outer div a:hover::after{
+    opacity: 1;
+    font-size: 1em;
+    background-color: #00000079;
+}
+.project_1 .outer a:hover video{
+    opacity: 0.7;
+}
+.project_1 .outer a:nth-child(1)::after{
+    line-height: 1.2em;
+    text-align: right;
+    content: "GENTLE MONSTER \A 2021 SEASON \A\A\A\A\A\A\A\A Event & Main page \A • 제작기간 : 21.9.10 ~ 11\A • 반응형 : O ";
+}
+.project_1 .outer a:nth-child(2)::after{
+    line-height: 1.2em;
+    text-align: right;
+    content: "CROWCANYON\A MAIN PLATES\A\A\A\A\A\A\A\A Landing page \A • 제작기간 : 21.9.9 \A • 반응형 : O ";
+}
+.project_1 .outer a:nth-child(3)::after{
+    line-height: 1.2em;
+    text-align: right;
+    content: "LUSH\A ABOUT KEY ITEMS\A\A\A\A\A\A\A\A Landing & Main page \A • 제작기간 : 21.9.16\A • 반응형 : O ";
+}
+.project_1 .outer a:nth-child(4)::after{
+    line-height: 1.2em;
+    text-align: right;
+    content: "ABOUT DINOSOUR\A BY YELIM \A\A\A\A\A\A\A\A Landing & Main page\A • 제작기간 : 21.12.21 ~ 22\A • 반응형 : O ";
+}
+.project_1 .outer a:nth-child(5)::after{
+    line-height: 1.2em;
+    text-align: right;
+    content: "✭ TEAM PROJECT\A SHAKE SHACK\A RENEWAL PROJECT\A\A Full page(6 page) \A • 참여부분 :\A web plan/design,\Alocation/Food & Drink/\A Delivery page \A • 제작기간 : 21.8.24 ~ 31\A • 반응형 : O ";
+}
+
+/* 컨텍트, 다른프젝, ui/ux */
+
+.contact{
+    width: 65%;
+    bottom: 0;
+    right: 0;
+}
+.contact article{
+    top: 15px;
+    right: 15px;
+    width: 200px;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+    
+    /* 컨텍트 */
+
+.contact article:first-child{
+    top: 15px;
+    left: 0;
+    height: 70%;
+    padding: 1%;
+    box-sizing: border-box;
+    transition: all .3s;
+}
+.contact article:first-child:hover{
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.contact article:first-child p{
+    bottom: 30px;
+    left: -57px;
+}
+.contact article:first-child a{
+    width: 96%;
+    text-align: center;
+    /* background-color: #fff; */
+    font-size: 1rem;
+    color: #000000;
+    transition: all .4s;
+}
+.contact article:first-child a:hover{
+    color: rgba(60, 60, 60, 0.784)
+}
+.contact article:first-child a:nth-child(2){
+    top: 23%;
+    left: 2%;
+}
+.contact article:first-child a:nth-child(3){
+    top: 30%;
+    left: 2%;
+}
+.contact article:first-child a:nth-child(4){
+    top: 45%;
+    left: 2%;
+}
+.contact article:first-child a img{
+    width: 30%;
+}
+
+    /* 프젝 2 */
+.contact article:nth-child(2){
+    left: 240px;
+    width: 230px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.contact article:nth-child(2) .mySwiper{
+    height: 100%;
+}
+.contact article:nth-child(2) p{
+    bottom: 100px;
+    left: -67px;
+}
+
+.contact article:nth-child(2) a {
+    border-bottom: 1px solid black;
+    height : 260px;
+    overflow: hidden;
+}
+.contact article:nth-child(2) a::after{
+    position: absolute;
+    display: block;
+    content: " ";
+    opacity: 0;
+    padding: 5%;
+    bottom: 1%;
+    right: 0;
+    width: 60%;
+    height: 40%;
+    color: #fff;
+    background-color: #000000;
+    z-index: 99;
+    transition: all 0.5s;
+    box-sizing: border-box;
+    white-space: pre;
+}
+.contact article:nth-child(2) a:hover::after{
+    opacity: 1;
+    font-size: 1em;
+    background-color: #00000079;
+}
+.contact article:nth-child(2) a:nth-child(1):hover::after{
+    line-height: 1.2em;
+    text-align: right;
+    content: "SQUID GAME \A CLONE \A Event Game \A • 제작기간 : 21.12.13\A • 반응형 : O ";
+}
+.contact article:nth-child(2) a:nth-child(2):hover::after{
+    line-height: 1.2em;
+    text-align: right;
+    content: "LEGOGAME \A\A Event Game \A • 제작기간 : 21.12.21\A • 반응형 : O ";
+}
+.contact article:nth-child(2) a:hover video{
+    opacity: 0.7;
+}
+.contact article:nth-child(2) a video{
+    width: 100%;
+    transition: all .5s ease;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+    /* ui/ux */
+.contact article:nth-child(3){
+    left: 500px;
+    height: 70%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.contact article:nth-child(3)::before{
+    position: absolute;
+    display: block;
+    opacity: 0;
+    content: "RIM \A\A\A - figma 구현\A UI디자인 및 \A프로토타입,\A 애니메이션 적용\A\A - UI 프로젝트\A 21.7.15 ~ 30";
+    width: 70%;
+    top: 30%;
+    right: 5%;
+    padding: 5%;
+    color: #fff;
+    background-color: #00000079;
+    z-index: 99;
+    transition: all 0.5s;
+    box-sizing: border-box;
+    white-space: pre;
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+.contact article:nth-child(3):hover::before{
+    opacity: 1;
+    content: "RIM \A\A\A - figma 구현\A UI디자인 및 \A프로토타입,\A 애니메이션 적용\A\A - UI 프로젝트\A 21.7.15 ~ 30";
+}
+
+.contact article:nth-child(3) p{
+    bottom: 12px;
+    left: -30px
+}
+.contact article:nth-child(3) img{
+    position: absolute;
+    width: 200px;
+    top: -4px;
+    z-index: 10;
+}
+.contact article:nth-child(3) video{
+    position: absolute;
+    width: 174px;
+    top: 9px;
+    left: 13px;
+    z-index: 5;
+}
+
+
+
+
+@media (max-width: 1024px){
+    .contact article{
+        top: 15px;
+        right: 15px;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .contact article:first-child{
+        left: -230px;
+    }
+    
+    .contact article:nth-child(3){
+        left: 0px;
+    }
+
+    
+}
+
+@media (max-width: 768px){
+    .wrap{
+        overflow-y: scroll;
+    }
+    section{
+        border: none;
+    }
+    p{
+        display: none;
+    }
+    a, .outer, article{
+        border: 1px solid #ccc;
+    }
+    .resume{
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+    }
+    .resume a{
+        left: 0;
+        height: 100%;
+    }
+    .resume .y_face{
+        width: 70%;
+    }
+    .resume .f_iam{
+        display: none;
+    }
+    .project_1{
+        width: 100%;
+        height: 200px;
+        top: 250px;
+    }
+    .project_1 .outer{
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding: 0;
+    }
+    .outer a{
+        border: none;
+    }
+    .project_1 .outer .swiper-wrapper a{
+        width: 365px;
+    }
+    .project_1 .outer a::after{
+        top: 0;
+        height: 90%;
+    }
+    .project_1 .outer a:nth-child(1)::after{
+        content: "GENTLE MONSTER \A 2021 SEASON \A\A\A\A\A\A\A Event & Main page \A • 제작기간 : 21.9.10 ~ 11\A • 반응형 : O ";
+    }
+    .project_1 .outer a:nth-child(2)::after{
+        content: "CROWCANYON\A MAIN PLATES\A\A\A\A\A\A\A Landing page \A • 제작기간 : 21.9.9 \A • 반응형 : O ";
+    }
+    .project_1 .outer a:nth-child(3)::after{
+        content: "LUSH\A ABOUT KEY ITEMS\A\A\A\A\A\A\A Landing & Main page \A • 제작기간 : 21.9.16\A • 반응형 : O ";
+    }
+    .project_1 .outer a:nth-child(4)::after{
+        content: "ABOUT DINOSOUR\A BY YELIM \A\A\A\A\A\A\A Landing & Main page\A • 제작기간 : 21.12.21 ~ 22\A • 반응형 : O ";
+    }
+    .project_1 .outer a:nth-child(5)::after{
+        content: "✭ TEAM PROJECT\A SHAKE SHACK\A RENEWAL PROJECT\A\A Full page(6 page) \A • 참여부분 :\A web plan/design,\Alocation/Food & Drink/\A Delivery page \A • 제작기간 : 21.8.24 ~ 31\A • 반응형 : O ";
+    }
+    @keyframes j_pj {
+        50%{ transform: translateX(-890px)}
+    }
+    
+    .outer .swiper-wrapper a:nth-child(2){
+        width: 375px;
+    }
+    .outer .swiper-wrapper a:nth-child(3){
+        width: 355px;
+    }
+    .outer .swiper-wrapper a:nth-child(4){
+        width: 355px;
+    }
+    .contact{
+        top: 450px;
+        width: 100%;
+        height: 500px;
+    }
+    .contact article:first-child{
+        top: 390px;
+        left: 46%;
+        width: 54%;
+        height: 22%;
+        background-color: rgba(255, 255, 255, 0.503);
+        cursor: pointer;
+    }
+    .contact article:first-child a{
+        border: none;
+    }
+    .contact article:first-child a img{
+        width: 20%;
+    }
+    .contact article:first-child:hover::after{
+        display: none;
+    }
+    .contact article:first-child a:nth-child(2){
+        top: 10%;
+    }
+    .contact article:first-child a:nth-child(3){
+        top: 27%;
+    }
+    .contact article:first-child a:nth-child(4){
+        top: 42%;
+    }
+    
+    .contact article:nth-child(2){
+        top: 0;
+        left: 0;
+        width: 46%;
+    }
+    .contact article:nth-child(2) a {
+        width: 100%;
+    }
+  
+    .contact article:nth-child(3){
+        top: 0;
+        left: 46%;
+        width: 100%;
+        height: 78%;
+        border: none;
+    }
+
+    .contact article:nth-child(3)::before{
+        content: "";
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 3%;
+        height: 390px;
+        border-radius: 0px;
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.606);
+    }
+    .contact article:nth-child(3):hover::before{
+        content: "RIM \A\A\A\A\A\A - figma 구현\A 전체 UI디자인 및 \A프로토타입,\A 애니메이션 적용\A\A - UI 프로젝트\A 21.7.15 ~ 30";
+        font-size: 0.8rem;
+        line-height: 1rem;
+        color: rgb(227, 227, 227);
+        top: 0;
+        left: 20%;
+        background-color: rgba(120, 19, 116, 0.606);
+    }
+   
+
+}
+
+
+@media (max-width: 520px){
+    .contact article:nth-child(2) a {
+        height: 50%;
+    }
+    .contact article:nth-child(2) a video{
+        object-fit: cover;
+    }
+   
+}

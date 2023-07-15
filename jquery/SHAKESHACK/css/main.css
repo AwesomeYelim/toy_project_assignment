@@ -1,0 +1,745 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "spoqaHanSansNeo_R";
+    src: url("../assets/SpoqaHanSansNeo-Regular.otf");
+}
+@font-face {
+    font-family: "spoqaHanSansNeo_B";
+    src: url("../assets/SpoqaHanSansNeo-Bold.otf");
+}
+
+/* Reset */
+* {padding: 0;margin: 0;box-sizing: border-box;}
+a {text-decoration: none; color: #231F20;}
+ul {list-style: none;}
+img {border: none;}
+body {width: 100%; height: 100%;}
+
+/* color */
+/* main - #6EB43F (green) #231F20(black) #fff sub - #FCE0A8(orange) #F2F3EE(grey) */
+
+/* Paragraphy */
+body {font-family: "spoqaHanSansNeo_R"; color: #231F20;}
+
+/* LayOuts */
+.container {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    padding: 25px 0;
+    position: fixed;
+    width: 100%;
+    height: 105px;
+    background: transparent;
+    z-index: 999;
+}
+.m_logo {
+    display: none;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+}
+nav ul li {
+    flex: 1;
+}
+nav ul li a {
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    text-transform: uppercase;
+}
+nav ul li a span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    transition: 0.35s;
+    transform-origin: 50% 0;
+}
+nav ul li a::after {
+    content: attr(data-menu);
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: scaleY(0);
+    transition: 0.35s;
+    padding-top: 5px;
+}
+
+/* hover */
+nav ul li a:hover span {
+    transform: scaleY(0);
+}
+nav ul li a:hover::after {
+    top: 0;
+    transform: scaleY(1);
+    color: #6EB43F;
+}
+nav ul li a.on span {
+    color: #6EB43F;
+    transform: scaleY(0);
+}
+nav ul li a.on::after {
+    top: 0;
+    transform: scaleY(1);
+    color: #6EB43F;
+}
+
+/* section1 */
+#fullpage,.section {
+    width: 100%;
+}
+.section {
+    overflow: hidden;
+}
+#section1 .carousel {
+    width: 100%;
+    height: 82%;
+    position: relative;
+}
+#section1 .carouselList a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+} 
+#section1 .carouselList a:nth-child(1){
+    background-image: url("../images/slide1.png");
+}
+#section1 .carouselList a:nth-child(2){
+    background-image: url("../images/slide2.png");
+}
+#section1 .carouselList a:nth-child(3){
+    background-image: url("../images/slide3.png");
+}
+.carouselTitle {
+    position: absolute;
+    left: 24%;
+    bottom: 0;
+    z-index: 5;
+}
+.carouselTitle  .title {
+    font-size: 5.625rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.carouselTitle .bar1 {
+    display: block;
+    margin-left: 0.5%;
+    margin-bottom: 25px;
+    width: 273px;
+    height: 10px;
+    background: #6EB43F;
+}
+.carouselSub {
+    position: absolute;
+    top: 70px;
+    right: 30%;
+    display: flex;
+    z-index: 5;
+}
+.carouselSub .bar2 {
+    display: block;
+    width: 10px;
+    height: 190px;
+    background: #6EB43F;
+    margin-right: 30px;
+}
+.carouselSub .sub {
+    line-height: 1.5;
+    font-size: 1.875rem;
+    color: #A8A8A8;
+    align-self: flex-end;
+    
+}
+.carouselSub .sub span {
+    display: inline-block;
+    width: 70px;
+    height: 1px;
+    background: #A8A8A8;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+
+/* section 2 */
+#section2 {
+    position: relative;
+    overflow: hidden;
+}
+#section2 .secCont {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 100px;
+}
+.secTitle {
+    margin-top: 20px;
+    position: relative;
+}
+.secTitle .block {
+    position: relative;
+    width: 35.4%;
+    height: 50px;
+    background: #FCE0A8;
+}
+.secTitle .secText {
+    position: absolute;
+    right: -15px;
+    bottom: -5px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.secTitle .secText em {
+    font-style: normal;
+    font-weight: bold;
+}
+.secCont {
+    position: relative;
+    padding: 0 40px;
+}
+.begin {
+    flex: 1;
+}
+.beginsImg {
+    width: 285px;
+    margin: 0 auto;
+    display: block;
+}
+.beginsImg embed svg {
+    margin-right: 0;
+}
+
+.beginTxt {
+    flex: 1;
+    padding: 80px 20px;
+    white-space: nowrap;
+}
+.beginTitle {
+    position: relative;
+    top: -30px;
+}
+.beginTitle .shortBar {
+    display: block;
+    width: 80px;
+    height: 10px;
+    background: #6EB43F;
+    margin-left: -5px;
+    margin-bottom: 15px;
+}
+.beginTitle h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.beginTitle h3 {
+    font-size: 1.875rem;
+    margin-bottom: 10px;
+}
+.beginCont p {
+    color: #A8A8A8;
+    line-height: 1.7;
+}
+.beginCont .blockquo {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+}
+.ushg_blockQuo {
+    width: 680px;
+    position: absolute;
+    right: -100%;
+    bottom: 50px;
+    transition: 1s;
+    opacity: 0;
+}
+.ushg_blockQuo.on {
+    right: 0;
+    opacity: 1;
+}
+.ushg_blockQuo p.ushg_blockQuo_title {
+    background: #F2F3EE;
+    padding: 13px 25px;
+    font-size: 0.9375rem;
+    color: #6EB43F;
+}
+.ushg_blockQuo .ushg_blockQuo_txt {
+    font-size: 13px;
+    padding-left: 31px;
+    margin-top: 10px;
+    color: #A8A8A8;
+}
+
+/* section 3 */
+#section3 {
+    background: #F2F3EE;
+}
+#section3 .secTitle{
+    left: 65%;
+    white-space: nowrap;
+    margin-bottom: 100px;
+}
+#section3 .secTitle .secText {
+    left: -30px;
+    top: -15px;
+}
+.secflex {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    
+}
+.secflex > div {
+    flex: 1;
+}
+.contLeftbg, .contLeft {
+    transform-origin: center;
+    transition: 1s;
+}
+.contLeft {
+    background: #fff;
+    padding: 56px 20px;
+    z-index: 20;
+    position: relative;
+}
+.contLeftbg {
+    position: absolute;
+    left: 10px;
+    top: -28px;
+    width: 35%;
+    height: 440px;
+    background: #FCE0A8;
+}
+
+.contLeft .contLeftTitle {
+    text-align: center;
+}
+.contLeft .contLeftTitle span:nth-child(1),.contLeft .contLeftTitle span:nth-child(3) {
+    font-size: 3.125rem;
+    color: #6EB43F;
+    padding: 0 10px;
+}
+.contLeft .contLeftTitle span:nth-child(2) {
+    font-size: 1.875rem;
+    color: #A8A8A8;
+}
+.contLeft .contLeftTitle span:nth-child(2) em {
+    font-style: normal;
+    color: #6EB43F;
+    font-weight: bold;
+    line-height: 88px;
+    margin-bottom: 10px;
+}
+.contLeftTxt {
+    width: 90%;
+    margin: 0 auto;
+}
+.contLeftTxt p {
+    margin: 20px 0;
+}
+.contLeftTxt p:nth-child(1) {
+    width: 75%;
+}
+.contLeftTxt p em  {
+    font-style: normal;
+    font-size: 1.125rem;
+    color: #676767;
+}
+.contLeftTxt p:nth-child(2),.contLeftTxt p:nth-child(3) {
+    color: #A8A8A8;
+}
+.contLeftTxt p:nth-child(2) {
+    margin-bottom: 20px;
+}
+.contRight {
+    text-align: center;
+}
+.contRight img {
+    position: relative;
+    left: 100px;
+    width: 100%;
+}
+/* section4 */
+#section4 {
+    position: relative;
+}
+.sec4Title {
+    position: relative;
+    width: 230px;
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 50px;
+    background: #fff;
+}
+.sec4Titlebg {
+    width: 230px;
+    height: 50px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    background:  #6EB43F;
+}
+.sec4TitleWrap {
+    position: relative;
+    top: -20px;
+    width: 250px;
+    margin: -150px auto 0;
+}
+.sec4Cont {
+    width: 100%;
+    padding: 75px 0;
+    background: #F2F3EE;
+    text-align: center;
+}
+.sec4flex {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.sec4Cont > article {
+    flex: 1;
+    align-self: center;
+}
+.sns{
+    position: relative;
+    cursor: pointer;
+    width: 214px;
+    padding: 25px;
+    transition: 0.35s;
+}
+.sns i {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 95px;
+    color: #A8A8A8;
+}
+.sns .snsName {
+    padding: 23px 0;
+    color: #6EB43F;
+    font-size: 1.125rem;
+}
+.sns .snsDetail {
+    font-size: 0.875rem;
+    color: #A8A8A8;
+    line-height: 1.6;
+}
+.snsImg {
+    margin: 0 auto;
+    height: 103px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sns:nth-child(1) .snsImg::before {
+    content: url("../images/snsfull1.png");
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+    transition: 0.35s;
+}
+.sns:nth-child(2) .snsImg::before {
+    content: url("../images/snsfull2.png");
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+    transition: 0.35s;
+}
+.sns:nth-child(3) .snsImg::before {
+    content: url("../images/snsfull3.png");
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+    transition: 0.35s;
+}
+.sns:nth-child(4) .snsImg::before {
+    content: url("../images/snsfull4.png");
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+    transition: 0.35s;
+}
+/* hover */
+.sns:hover {
+    background: rgba(255, 255, 255, 0.425);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px #ccc;
+}
+.sns:nth-child(1):hover .snsImg::before {
+    width: 32%;
+}
+.sns:nth-child(2):hover .snsImg::before {
+    width: 51%;
+}
+.sns:nth-child(3):hover .snsImg::before {
+    width: 72%;
+}
+.sns:nth-child(4):hover .snsImg::before {
+    width: 51%;
+}
+/* footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #231F20;
+    padding-top: 18px;
+    text-align: center;
+    color: #A8A8A8;
+}
+footer .footer_top > ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+footer .footer_top > ul > li > a {
+    color: #F2F3EE;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+footer .footer_top li a {
+    display: block;
+    padding: 5px;
+    font-size: 0.625rem;
+}
+.subList a {
+    color: #A8A8A8;
+}
+
+footer .footer_bottom {
+    font-size: 0.625rem;
+    margin-top: 30px;
+ }
+/* mainBtn */
+.mainBtn {
+    position: fixed;
+    z-index: 55;
+    bottom: 50px;
+    left: 66px;
+}
+.mainBtn .logo {
+    width: 106px;
+    height: 116px;
+    transition: 0.35s;
+}
+.mainBtn .logo a {
+    display: block;
+    text-indent: -9999em;
+    width: 100%;
+    height: 100%;
+    background: url("../images/logo.png") no-repeat center / cover;
+}
+
+/* topBtn */
+/* .topBtn {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+.top {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px; 
+    border: 2px solid #6EB43F;
+    text-indent: -9999em;
+    border-radius: 50%;
+    background: url("../images/topArrow.png") no-repeat center;
+} */
+
+
+/* ******************************************************************* 태블릿 화면 css */
+@media screen and (max-width: 1124px) {
+    
+    nav ul li a {
+        font-size: 0.9375rem;
+    }
+    /* section1 */
+    .carouselSub {
+        top: 25%;
+        right: 24%;
+    }
+    .carouselSub .bar2 {
+        height: 100px;
+    }
+    .carouselSub .sub {
+        font-size: 1.5rem;
+    }
+    .carouselSub .sub span  {
+        width: 40px;
+    }
+    .beginCont p {
+        font-size: 0.875rem;
+    }
+    /* section 3 */
+    #section3 {
+        padding: 90px 0 0 20px;
+    }
+    .secTitle .secText {
+        
+        font-size: 1.25rem;
+    }
+    .contLeft .contLeftTitle span:nth-child(1),.contLeft .contLeftTitle span:nth-child(3) {
+        font-size: 1.875rem;
+    }
+    .contLeft .contLeftTitle span:nth-child(2) {
+        font-size: 1.25rem;
+    }
+    .contLeftTxt p:nth-child(1) {
+        width: 65%;
+    }
+    .contLeftTxt p em {
+        font-size: 0.9rem;
+    }
+    .contLeftTxt p {
+        font-size: 0.8125rem;
+    }
+    .contRight img {
+        top: 50px;
+        left: 50px;
+    }
+    /* section4 */
+    .sec4Cont {
+        padding: 75px 20px;
+    }
+    footer .footer_top > ul {
+        justify-content: center;
+    }
+    footer .footer_top > ul > li {
+        width: 15%;
+    }
+
+    /* top */
+    .mainBtn .logo {
+        width: 80px;
+        height: 88px;
+    }
+    .mainBtn .logo a {
+        background: url("../images/logo_tab.png") no-repeat center / cover;
+    }
+    .pagePagination {
+        right: 2%;
+    }
+}
+/* ******************************************************************* 모바일 화면 css */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px 0 10px;
+        background: #fff;
+    }
+    .m_logo {
+        display: block;
+    }
+    .m_logo a {
+        display: block;
+        text-indent: -9999em;
+        width: 300px;
+        margin: 0 auto;
+        background: url("../images/ss_logo.png") no-repeat center / contain;
+
+    }
+    nav ul {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+    .secTitle .secText {
+        font-size: 1.0625rem;
+    }
+    /* section2 */
+    .beginsImg {
+        width: 200px;
+        margin: 60px auto;
+    }
+    .beginTitle .shortBar {
+        width: 60px;
+        height: 8px;
+    }
+    .beginTitle h2 {
+        font-size: 25px;
+    }
+    .beginTitle h3 {
+        font-size: 1rem;
+    }
+    .beginCont p {
+        font-size: 0.7rem;
+    }
+    .sec4flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    /* section3 */
+    #section3 .secTitle {
+        margin-bottom: 80px;
+    }
+    .secflex {
+        flex-direction: column-reverse;
+    }
+    
+    .contLeftbg {
+        display: none;
+    }
+    .contLeft {
+        margin-top: 20px;
+        padding: 10px 30px;
+    }
+    .contLeftTxt {
+        margin: 0 0;
+        width: 100%;
+    }
+    .contRight img {
+        width: 250px;
+        top: 0;
+        left: 0;
+    }
+    /* section4 */
+    .sec4Cont {
+        padding: 10px 0;
+    }
+    .sns {
+        width: 40%;
+        padding: 10px 0;
+    }
+    .sns .snsName {
+        font-size: 0.8125rem;
+    }
+    .sns .snsDetail {
+        font-size: 0.8rem;
+    }
+    /* hover */
+    .sns:nth-child(1):hover .snsImg::before {
+        width: 27%;
+    }
+    .sns:nth-child(2):hover .snsImg::before {
+        width: 42%;
+    }
+    .sns:nth-child(3):hover .snsImg::before {
+        width: 59%;
+    }
+    .sns:nth-child(4):hover .snsImg::before {
+        width: 42%;
+    }
+    /* Btn */
+    .mainBtn {
+        display: none;
+    }
+}
+
+

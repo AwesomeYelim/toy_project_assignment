@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/* Reset CSS */
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: #555; outline: none;}
+img{ border: none;}
+body{
+    font-family: 'Arial', sans-serif;
+}
+
+/* 로고 이미지 */
+
+#logo{width: 300px;
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        z-index: 3;
+        }
+
+#logo img, #m_logo img {width: 100%;}
+
+#m_logo{
+    position: fixed;
+    width: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:50;
+}
+#m_logo img{
+    width: 100%;
+    animation: mlo 5s linear infinite;
+}
+
+@keyframes mlo{
+    to{transform: rotate(360deg);}
+}
+
+
+/* 메뉴 */
+#menu{
+    width: 300px;
+    height: 320px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    margin-top: -160px;
+    z-index: 999;
+}
+
+#menu ul li { width: 100%; height: 80px; text-align: right;}
+#menu ul li a {
+    color: rgb(239, 239, 239);
+    font-size: 1.5em;
+    transition: 0.2s;
+    display: block;
+    border-top: 1px solid rgb(239, 239, 239);
+} 
+
+#menu ul li:hover a {font-size: 2em;}
+#menu ul li:nth-child(1):hover a {color: #f8da78; border-top-color: #f8da78;}
+#menu ul li:nth-child(2):hover a {color: #c45a5a; border-top-color: #c45a5a;}
+#menu ul li:nth-child(3):hover a {color: #6044ff; border-top-color: #6044ff;}
+#menu ul li:nth-child(4):hover a {color: #4b4b4b; border-top-color: #4b4b4b;}
+
+#menu ul li:nth-child(1).on a {color: #f8da78; border-top-color: #f8da78; font-size: 2em;}
+#menu ul li:nth-child(2).on a {color: #c45a5a; border-top-color: #c45a5a; font-size: 2em;}
+#menu ul li:nth-child(3).on a {color: #6044ff; border-top-color: #6044ff; font-size: 2em;}
+#menu ul li:nth-child(4).on a {color: #4b4b4b; border-top-color: #4b4b4b; font-size: 2em;}
+
+/* 본문내용 */
+
+section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; overflow: hidden;
+}
+
+section:nth-child(1) { background-image: url(../img/bg1.jpg);}
+section:nth-child(2) { background-image: url(../img/bg2.jpg);}
+section:nth-child(3) { background-image: url(../img/bg3.jpg);}
+section:nth-child(4) { background-image: url(../img/bg4.jpg);}
+
+/* 본문 이미지 */
+section img{
+    position: absolute;
+    z-index: 70;
+    width: 40%;
+    }
+.p11 {bottom: 0px; right: 10px; }
+.p12 {bottom: 10px; left: 100px; }
+
+.p21 {bottom: -60px; left: 0px;}
+.p22 {bottom: -120px; right: 30px; width: 30%;}
+
+.p31 {bottom: 30px; right: 10px;}
+
+.p42 {bottom: -170px; left: 20px;}
+
+@media screen and (max-width : 1200px) {
+    #menu{
+        width: 200px;
+        background-color: rgba(34, 34, 34, 0.325);
+        padding: 10px 10px 10px 0;
+    }
+    #menu ul li a {
+        color: rgb(232, 232, 232);
+        border-top: 1px solid rgb(232, 232, 232);
+    } 
+    #menu ul li:hover a {font-size: 1.7em; text-shadow: 0.5px 0.5px 0.5px rgb(235, 235, 235);}
+    #menu ul li.on{text-shadow: 0.5px 0.5px 0.5px rgb(235, 235, 235);}
+    #menu ul li:nth-child(1).on a {color: #f8da78; border-top-color: #f8da78; font-size: 1.75em;}
+    #menu ul li:nth-child(2).on a {color: #c45a5a; border-top-color: #c45a5a; font-size: 1.75em;}
+    #menu ul li:nth-child(3).on a {color: #6044ff; border-top-color: #6044ff; font-size: 1.75em;}
+    #menu ul li:nth-child(4).on a {color: #4b4b4b; border-top-color: #4b4b4b; font-size: 1.75em;}
+}

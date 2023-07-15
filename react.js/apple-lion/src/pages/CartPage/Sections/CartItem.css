@@ -1,0 +1,69 @@
+.buttons {
+    position: relative;
+    padding-top: 30px;
+    width: 50px;
+    text-align: end;
+}
+
+.item {
+    padding:20px 30px;
+    height: 120px;
+    display: flex;
+    border-bottom: 1px solid #e1e8ee;
+}
+
+.image {
+    margin-right: 50px;
+}
+
+.image img {
+    height: 100%;
+    width: 130px;
+}
+
+.description {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 115px;
+}
+
+.description span {
+    display: block;
+    font-size: 14px;
+    color: #43484d;
+    font-weight: 400;
+}
+
+.description span:first-child {
+    margin-bottom: 5px;
+}
+
+.description span:last-child {
+    font-weight: 300;
+    margin-top: 8px;
+    color: #86939e;
+}
+
+.quantity {
+    padding-top: 20px;
+    margin-right: 60px;
+}
+
+.quantity input {
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color: #43484d;
+    font-weight: 300;
+}
+
+.item button[class*="btn"] {
+    width: 30px;
+    height: 30px;
+    background-color: #e1e8ee;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}

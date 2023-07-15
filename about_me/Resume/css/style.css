@@ -1,0 +1,146 @@
+/* *{
+    margin: 0; padding: 0;
+} */
+body{
+    overflow-x: hidden;
+}
+a{
+    color: #005fa7;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* 스크롤바 */
+.progress {
+    position: fixed;
+    width: 100%;
+    height: 4px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.bar{
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    top: 0;
+    left: 0;
+    background-color: #00467A;
+    z-index: 100;
+}
+
+#wrap{
+    width: 80%;
+    margin: 70px auto;
+    max-width: 1000px;
+    /* background-color: antiquewhite; */
+}
+/* greeting */
+.greeting{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* background-color: aliceblue; */
+}
+.greeting img{
+    width: 40%;
+    max-width: 386px;
+    min-width: 200px;
+}
+.greeting article{
+    display: block;
+    /* background-color: aliceblue; */
+    overflow: hidden;
+}
+.greeting article hr{
+    height: 3px;
+    background-color: #ccc; 
+    border: none;
+    border-radius: 2px;
+    width: 100px;
+    transform: translateX(-200px);
+    margin-bottom: -10px;
+}
+.greeting article h1{
+    font-size: 2rem;
+}
+/* 프로필 */
+.profile article{
+    margin-left: 30px;
+}
+.profile ul .mail{
+    font-size: 1.5rem;
+}
+.profile ul .n_copy{
+    border: none;
+    padding: 1% 2%;
+    line-height: 100%;
+    transform: translateY(-10%);
+    margin-left: 10px;
+    color: #fff;
+    background-color: #00467A;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.profile ul .n_copy:hover{
+    background-color: #005ca2;
+}
+.profile article a button{
+    padding: 10px 15px;
+    color: rgb(176, 176, 176);
+    font-size: bolder;
+    border: 0.1px solid rgb(235, 235, 235);
+    border-radius: 10%;
+    margin-left: 10px;
+    transition: all 0.2s linear;
+    background-color: #fff;
+    box-shadow: 1px 4px 1px 1px #ccc;
+    cursor: pointer;
+}
+.profile article button:hover{
+    background-color: rgb(242, 242, 242);
+    /* color: #fff; */
+    box-shadow: 1px 2px 1px 1px #ccc;
+    transform: translateY(2px);
+}
+/* 기술 */
+.skill img{
+    width: 10%;
+    max-width: 55px;
+    margin-right: 3px;
+}
+
+/* 공통 */
+
+section{
+    margin: 100px 0;
+}
+section h2{
+    border-left: 3px solid #ccc;
+    padding-left: 10px;
+    height: 25px;
+}
+section li{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    #wrap{
+        width: 90%;
+        
+    }
+    .greeting article{
+        text-align: center;
+    }
+    .greeting article hr{
+        transform: translateX(0);
+        width: 50px;
+        margin-bottom: -15px;
+    }
+}
