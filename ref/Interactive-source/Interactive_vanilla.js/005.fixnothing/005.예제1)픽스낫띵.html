@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제1</title>
+    <style>
+        body {
+            position: relative;
+            background-color: black;
+            /* cursor: none; */
+            overflow: hidden;
+        }
+        h1{
+            color: #fff;
+        }
+        /* .cusor_item{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            margin: -50px 0 0 -50px;  
+            transition: all 0.6s cubic-bezier(1.000, -0.040, 0.000, 1.060);
+        } */
+
+        .human{
+            position: absolute;
+            left: calc(50% - 150px);/*이미지 가운데로 보내는방법*/
+            width: 300px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+<h1></h1>
+<div class="cusor_item"></div>
+<img src="./img/layer-7.png" class="human" alt="닝겐">
+<img src="./img/layer-1.jpg" class="bg" alt="벽">
+
+
+
+
+
+
+<script>
+        let human;
+        let bg
+        let h1;
+
+        let x = 0;
+        let y = 0;
+        let mx = 0;
+        let my = 0;
+        let speed =0.009;
+
+        //window.onload 는 화면이 다 로딩된후에 실행하라는 뜻
+        window.onload = function() {
+            
+            h1 = document.getElementsByTagName("h1")[0];   
+            human = document.getElementsByClassName("human")[0];   
+            bg = document.getElementsByClassName("bg")[0];   
+            window.addEventListener('mousemove', mouseFunc, false);
+    
+            function mouseFunc(e) {
+                x = (e.clientX - window.innerWidth / 2); //윈도우 가로사이즈/2 뺴줌으로 영역지정
+                y = (e.clientY - window.innerHeight / 2);
+            }
+            loop(); 
+        }
+        
+        function loop(){
+            // console.log(x);
+            mx += (x - mx) * speed;
+            my += (y - my) * speed;
+            // console.log(x, mx)
+
+            h1.innerHTML ='x: ' + x + " mx: " + mx;
+            human.style.transform = "translate("+ -(mx/6) +"px,"+ -(my/6) + "px)"
+            bg.style.transform = "translate("+ (mx/6) +"px,"+ (my/6) + "px)"
+
+            window.requestAnimationFrame(loop);
+            
+        }
+
+    </script>
+</body>
+</html>

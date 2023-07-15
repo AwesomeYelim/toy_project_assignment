@@ -1,0 +1,80 @@
+body {
+  background: #4197c9;
+  overflow: hidden;
+}
+
+.cursorItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: .5;
+}
+
+.cursorItem .circle {
+  position: fixed;
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: -60px 0 0 -60px;
+  background: #a300a8;
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+}
+
+.gate-box {
+  position: absolute;
+  top: 40%;
+  left: calc(50% - 200px);
+  width: 400px;
+}
+
+.gate-box .top {
+  border: 2px solid #fff;
+  border-bottom: none;
+  padding: 5px;
+}
+
+.gate-box .top p {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.gate-box p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.gate-box .bottom {
+  border: 2px solid #fff;
+}
+
+.gate-box .bottom .inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.gate-box .bottom a {
+  font-size: 20px;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px 0;
+  transition: all .3s ease;
+  box-sizing: inherit;
+}
+
+.gate-box .bottom a:hover {
+  background: #fff;
+  color: #4197c9;
+}
+
+.gate-box .bottom #yes {
+  border-right: 2px solid #fff;
+}

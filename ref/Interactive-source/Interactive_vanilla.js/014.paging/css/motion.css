@@ -1,0 +1,88 @@
+body {
+  background: #222;
+  overflow: hidden;
+}
+
+body main {
+  position: relative;
+  background-color: red;
+}
+
+.textWrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background: #000;
+  text-align: center;
+  overflow: hidden;
+}
+
+.textWrap h1 {
+  color: #fff;
+  transform: translate(0, -200%);
+  transition: all .3s ease-out;
+}
+
+.textWrap h1.active {
+  transform: translate(0, 0);
+}
+
+.contentWrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  visibility: hidden;
+}
+
+.contentWrap.active {
+  visibility: visible;
+}
+
+.contentWrap img {
+  width: 200px;
+  transition: all 0.8s cubic-bezier(0.86, 0.005, 0.31, 0.995);
+  opacity: 0;
+}
+
+.contentWrap img.img0 {
+  transform: translate(-300%, 0);
+  transition-delay: .1s;
+}
+
+.contentWrap img.img1 {
+  transform: translate(0, -300%);
+  transition-delay: .18s;
+}
+
+.contentWrap img.img2 {
+  transform: translate(0, 300%);
+  transition-delay: .26s;
+}
+
+.contentWrap img.img3 {
+  transform: translate(300%, 0);
+  transition-delay: .3s;
+}
+
+.contentWrap img.active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.buttonWrap {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.buttonWrap button {
+  padding: 10px 40px;
+  background: #fff;
+  font-size: 20px;
+}

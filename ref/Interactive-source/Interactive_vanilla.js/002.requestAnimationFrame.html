@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop, 자연스러운 움직임</title>
+    <style>
+        body {
+            position: relative;
+            background-color: black;
+            cursor: none;
+        }
+        h1{
+            color: #fff;
+        }
+        .cusor_item{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<h1>test</h1>
+<div class="cusor_item"></div>
+    <script>
+        //window.onload 는 화면이 다 로딩된후에 실행하라는 뜻
+        window.onload = function() {
+            
+            let h1 = document.getElementsByTagName("h1")[0];   
+            let CUSOR  = document.getElementsByClassName("cusor_item")[0];   
+            window.addEventListener('mousemove', mouseFunc, false);
+    
+            function mouseFunc(e) {
+                h1.innerHTML ='x: ' + e.clientX + " y: " + e.clientY;
+                CUSOR.style.transform = "translate("+e.clientX+"px,"+e.clientY + "px)";
+                // console.log(e.clientX, e.clientY);
+            }
+            loop();
+        }
+        let i = 0;
+        function loop(){
+            // console.log(i += 1)
+            window.requestAnimationFrame(loop);
+
+        }
+
+    </script>
+</body>
+</html>

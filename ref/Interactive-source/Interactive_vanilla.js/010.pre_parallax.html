@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤값 구하기</title>
+    <style>
+        body{
+            /* height: 10000px; */
+            background: linear-gradient(150deg,orange, rgb(255, 255, 171),indigo,skyblue,pink, black);
+        }
+        h1{
+            color: white;
+        }
+        .prograss{
+            position: fixed;
+            width: 4px;
+            height: 140px ;
+            background-color: black;
+            top: 40%;
+            left: 20px;
+            z-index: 10;
+        }
+        .bar{
+            position: absolute;
+            width: 4px;
+            height: 0px;
+            background-color: rgb(143, 214, 255);
+            top: 0;
+            left: 0;
+            z-index: 11;
+        }
+        section{
+            width: 400px;
+            background-color: rgba( 225, 225, 225, .9);
+            margin: 30px auto;
+            padding: 20px;
+        }
+        p{
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>스크롤</h1>
+    <div class="prograss">
+        <span class="bar"></span>
+    </div>
+    <div>
+        <img src="./010.parallax/cloud.png" alt="">
+    </div>
+    <section>
+        <h1>제목</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni ea ullam corrupti! Quia autem impedit necessitatibus earum soluta! Suscipit consequatur ipsa ullam neque voluptatum perferendis quod. Maiores, nemo et.
+        Quam nobis aut deleniti. Illo unde voluptates dignissimos omnis quasi nulla magnam odio saepe quo, praesentium debitis corrupti consectetur fuga reprehenderit. Earum fugit tempore facilis architecto nihil praesentium eos enim?
+        Dolore beatae repellat vitae assumenda. Culpa quae tempore, in harum dolor placeat mollitia quidem quisquam sit aspernatur. Facere sed sunt nemo autem velit! Perspiciatis commodi deserunt similique? Odio, illo dolorem.
+        Consectetur, sequi est. Repellat blanditiis tempore odit ea nisi voluptatem, minima, placeat temporibus ullam asperiores voluptate eius atque dicta cum laborum? Cupiditate dolores earum quidem vitae incidunt, necessitatibus rerum veritatis.
+        Ullam vero corporis molestias, numquam officiis consequuntur nam eligendi voluptate ab deleniti! Inventore asperiores voluptatibus voluptas esse sequi dolor ea unde. Vero libero nisi ex consequuntur, non quod. Optio, eum?
+        Sequi eveniet at tempore id, iusto provident quo laboriosam error corrupti animi quos quaerat ex expedita? Odit aperiam enim tempora dolor saepe. Ducimus, necessitatibus reiciendis doloribus sapiente rem quam voluptatibus.
+        Animi voluptatibus quam doloribus maxime incidunt, odit quasi magnam, cumque quisquam, dolores ex nobis ut enim hic soluta a totam aliquam eligendi illo amet asperiores tenetur! Labore earum consectetur veniam!
+        Fugit aliquam recusandae architecto! Natus voluptatem doloribus nostrum quasi hic aliquam dolor beatae sapiente fuga, modi illum ex veritatis accusamus placeat numquam recusandae culpa? Culpa corrupti totam nulla vitae autem.
+        Nostrum accusantium repellendus obcaecati aperiam. Ducimus perferendis, inventore provident tempora, praesentium at, laudantium ratione nemo aut alias nisi culpa et repudiandae molestiae fuga atque eveniet recusandae! Ipsum numquam illo omnis?
+        Nobis amet, eligendi dignissimos culpa eius laudantium voluptas quos accusantium natus quas reiciendis, earum cupiditate provident corporis! Delectus, quas harum beatae, rerum eum ipsam tenetur at quia, quae nobis impedit!</p>
+    </section>
+    <section>
+        <h1>제목</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni ea ullam corrupti! Quia autem impedit necessitatibus earum soluta! Suscipit consequatur ipsa ullam neque voluptatum perferendis quod. Maiores, nemo et.
+        Quam nobis aut deleniti. Illo unde voluptates dignissimos omnis quasi nulla magnam odio saepe quo, praesentium debitis corrupti consectetur fuga reprehenderit. Earum fugit tempore facilis architecto nihil praesentium eos enim?
+        Dolore beatae repellat vitae assumenda. Culpa quae tempore, in harum dolor placeat mollitia quidem quisquam sit aspernatur. Facere sed sunt nemo autem velit! Perspiciatis commodi deserunt similique? Odio, illo dolorem.
+        Consectetur, sequi est. Repellat blanditiis tempore odit ea nisi voluptatem, minima, placeat temporibus ullam asperiores voluptate eius atque dicta cum laborum? Cupiditate dolores earum quidem vitae incidunt, necessitatibus rerum veritatis.
+        Ullam vero corporis molestias, numquam officiis consequuntur nam eligendi voluptate ab deleniti! Inventore asperiores voluptatibus voluptas esse sequi dolor ea unde. Vero libero nisi ex consequuntur, non quod. Optio, eum?
+        Sequi eveniet at tempore id, iusto provident quo laboriosam error corrupti animi quos quaerat ex expedita? Odit aperiam enim tempora dolor saepe. Ducimus, necessitatibus reiciendis doloribus sapiente rem quam voluptatibus.
+        Animi voluptatibus quam doloribus maxime incidunt, odit quasi magnam, cumque quisquam, dolores ex nobis ut enim hic soluta a totam aliquam eligendi illo amet asperiores tenetur! Labore earum consectetur veniam!
+        Fugit aliquam recusandae architecto! Natus voluptatem doloribus nostrum quasi hic aliquam dolor beatae sapiente fuga, modi illum ex veritatis accusamus placeat numquam recusandae culpa? Culpa corrupti totam nulla vitae autem.
+        Nostrum accusantium repellendus obcaecati aperiam. Ducimus perferendis, inventore provident tempora, praesentium at, laudantium ratione nemo aut alias nisi culpa et repudiandae molestiae fuga atque eveniet recusandae! Ipsum numquam illo omnis?
+        Nobis amet, eligendi dignissimos culpa eius laudantium voluptas quos accusantium natus quas reiciendis, earum cupiditate provident corporis! Delectus, quas harum beatae, rerum eum ipsam tenetur at quia, quae nobis impedit!</p>
+    </section>
+    <section>
+        <h1>제목</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni ea ullam corrupti! Quia autem impedit necessitatibus earum soluta! Suscipit consequatur ipsa ullam neque voluptatum perferendis quod. Maiores, nemo et.
+        Quam nobis aut deleniti. Illo unde voluptates dignissimos omnis quasi nulla magnam odio saepe quo, praesentium debitis corrupti consectetur fuga reprehenderit. Earum fugit tempore facilis architecto nihil praesentium eos enim?
+        Dolore beatae repellat vitae assumenda. Culpa quae tempore, in harum dolor placeat mollitia quidem quisquam sit aspernatur. Facere sed sunt nemo autem velit! Perspiciatis commodi deserunt similique? Odio, illo dolorem.
+        Consectetur, sequi est. Repellat blanditiis tempore odit ea nisi voluptatem, minima, placeat temporibus ullam asperiores voluptate eius atque dicta cum laborum? Cupiditate dolores earum quidem vitae incidunt, necessitatibus rerum veritatis.
+        Ullam vero corporis molestias, numquam officiis consequuntur nam eligendi voluptate ab deleniti! Inventore asperiores voluptatibus voluptas esse sequi dolor ea unde. Vero libero nisi ex consequuntur, non quod. Optio, eum?
+        Sequi eveniet at tempore id, iusto provident quo laboriosam error corrupti animi quos quaerat ex expedita? Odit aperiam enim tempora dolor saepe. Ducimus, necessitatibus reiciendis doloribus sapiente rem quam voluptatibus.
+        Animi voluptatibus quam doloribus maxime incidunt, odit quasi magnam, cumque quisquam, dolores ex nobis ut enim hic soluta a totam aliquam eligendi illo amet asperiores tenetur! Labore earum consectetur veniam!
+        Fugit aliquam recusandae architecto! Natus voluptatem doloribus nostrum quasi hic aliquam dolor beatae sapiente fuga, modi illum ex veritatis accusamus placeat numquam recusandae culpa? Culpa corrupti totam nulla vitae autem.
+        Nostrum accusantium repellendus obcaecati aperiam. Ducimus perferendis, inventore provident tempora, praesentium at, laudantium ratione nemo aut alias nisi culpa et repudiandae molestiae fuga atque eveniet recusandae! Ipsum numquam illo omnis?
+        Nobis amet, eligendi dignissimos culpa eius laudantium voluptas quos accusantium natus quas reiciendis, earum cupiditate provident corporis! Delectus, quas harum beatae, rerum eum ipsam tenetur at quia, quae nobis impedit!</p>
+    </section>
+    <section>
+        <h1>제목</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni ea ullam corrupti! Quia autem impedit necessitatibus earum soluta! Suscipit consequatur ipsa ullam neque voluptatum perferendis quod. Maiores, nemo et.
+        Quam nobis aut deleniti. Illo unde voluptates dignissimos omnis quasi nulla magnam odio saepe quo, praesentium debitis corrupti consectetur fuga reprehenderit. Earum fugit tempore facilis architecto nihil praesentium eos enim?
+        Dolore beatae repellat vitae assumenda. Culpa quae tempore, in harum dolor placeat mollitia quidem quisquam sit aspernatur. Facere sed sunt nemo autem velit! Perspiciatis commodi deserunt similique? Odio, illo dolorem.
+        Consectetur, sequi est. Repellat blanditiis tempore odit ea nisi voluptatem, minima, placeat temporibus ullam asperiores voluptate eius atque dicta cum laborum? Cupiditate dolores earum quidem vitae incidunt, necessitatibus rerum veritatis.
+        Ullam vero corporis molestias, numquam officiis consequuntur nam eligendi voluptate ab deleniti! Inventore asperiores voluptatibus voluptas esse sequi dolor ea unde. Vero libero nisi ex consequuntur, non quod. Optio, eum?
+        Sequi eveniet at tempore id, iusto provident quo laboriosam error corrupti animi quos quaerat ex expedita? Odit aperiam enim tempora dolor saepe. Ducimus, necessitatibus reiciendis doloribus sapiente rem quam voluptatibus.
+        Animi voluptatibus quam doloribus maxime incidunt, odit quasi magnam, cumque quisquam, dolores ex nobis ut enim hic soluta a totam aliquam eligendi illo amet asperiores tenetur! Labore earum consectetur veniam!
+        Fugit aliquam recusandae architecto! Natus voluptatem doloribus nostrum quasi hic aliquam dolor beatae sapiente fuga, modi illum ex veritatis accusamus placeat numquam recusandae culpa? Culpa corrupti totam nulla vitae autem.
+        Nostrum accusantium repellendus obcaecati aperiam. Ducimus perferendis, inventore provident tempora, praesentium at, laudantium ratione nemo aut alias nisi culpa et repudiandae molestiae fuga atque eveniet recusandae! Ipsum numquam illo omnis?
+        Nobis amet, eligendi dignissimos culpa eius laudantium voluptas quos accusantium natus quas reiciendis, earum cupiditate provident corporis! Delectus, quas harum beatae, rerum eum ipsam tenetur at quia, quae nobis impedit!</p>
+    </section>
+    <section>
+        <h1>제목</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni ea ullam corrupti! Quia autem impedit necessitatibus earum soluta! Suscipit consequatur ipsa ullam neque voluptatum perferendis quod. Maiores, nemo et.
+        Quam nobis aut deleniti. Illo unde voluptates dignissimos omnis quasi nulla magnam odio saepe quo, praesentium debitis corrupti consectetur fuga reprehenderit. Earum fugit tempore facilis architecto nihil praesentium eos enim?
+        Dolore beatae repellat vitae assumenda. Culpa quae tempore, in harum dolor placeat mollitia quidem quisquam sit aspernatur. Facere sed sunt nemo autem velit! Perspiciatis commodi deserunt similique? Odio, illo dolorem.
+        Consectetur, sequi est. Repellat blanditiis tempore odit ea nisi voluptatem, minima, placeat temporibus ullam asperiores voluptate eius atque dicta cum laborum? Cupiditate dolores earum quidem vitae incidunt, necessitatibus rerum veritatis.
+        Ullam vero corporis molestias, numquam officiis consequuntur nam eligendi voluptate ab deleniti! Inventore asperiores voluptatibus voluptas esse sequi dolor ea unde. Vero libero nisi ex consequuntur, non quod. Optio, eum?
+        Sequi eveniet at tempore id, iusto provident quo laboriosam error corrupti animi quos quaerat ex expedita? Odit aperiam enim tempora dolor saepe. Ducimus, necessitatibus reiciendis doloribus sapiente rem quam voluptatibus.
+        Animi voluptatibus quam doloribus maxime incidunt, odit quasi magnam, cumque quisquam, dolores ex nobis ut enim hic soluta a totam aliquam eligendi illo amet asperiores tenetur! Labore earum consectetur veniam!
+        Fugit aliquam recusandae architecto! Natus voluptatem doloribus nostrum quasi hic aliquam dolor beatae sapiente fuga, modi illum ex veritatis accusamus placeat numquam recusandae culpa? Culpa corrupti totam nulla vitae autem.
+        Nostrum accusantium repellendus obcaecati aperiam. Ducimus perferendis, inventore provident tempora, praesentium at, laudantium ratione nemo aut alias nisi culpa et repudiandae molestiae fuga atque eveniet recusandae! Ipsum numquam illo omnis?
+        Nobis amet, eligendi dignissimos culpa eius laudantium voluptas quos accusantium natus quas reiciendis, earum cupiditate provident corporis! Delectus, quas harum beatae, rerum eum ipsam tenetur at quia, quae nobis impedit!</p>
+    </section>
+    <section>
+        <h1>제목</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni ea ullam corrupti! Quia autem impedit necessitatibus earum soluta! Suscipit consequatur ipsa ullam neque voluptatum perferendis quod. Maiores, nemo et.
+        Quam nobis aut deleniti. Illo unde voluptates dignissimos omnis quasi nulla magnam odio saepe quo, praesentium debitis corrupti consectetur fuga reprehenderit. Earum fugit tempore facilis architecto nihil praesentium eos enim?
+        Dolore beatae repellat vitae assumenda. Culpa quae tempore, in harum dolor placeat mollitia quidem quisquam sit aspernatur. Facere sed sunt nemo autem velit! Perspiciatis commodi deserunt similique? Odio, illo dolorem.
+        Consectetur, sequi est. Repellat blanditiis tempore odit ea nisi voluptatem, minima, placeat temporibus ullam asperiores voluptate eius atque dicta cum laborum? Cupiditate dolores earum quidem vitae incidunt, necessitatibus rerum veritatis.
+        Ullam vero corporis molestias, numquam officiis consequuntur nam eligendi voluptate ab deleniti! Inventore asperiores voluptatibus voluptas esse sequi dolor ea unde. Vero libero nisi ex consequuntur, non quod. Optio, eum?
+        Sequi eveniet at tempore id, iusto provident quo laboriosam error corrupti animi quos quaerat ex expedita? Odit aperiam enim tempora dolor saepe. Ducimus, necessitatibus reiciendis doloribus sapiente rem quam voluptatibus.
+        Animi voluptatibus quam doloribus maxime incidunt, odit quasi magnam, cumque quisquam, dolores ex nobis ut enim hic soluta a totam aliquam eligendi illo amet asperiores tenetur! Labore earum consectetur veniam!
+        Fugit aliquam recusandae architecto! Natus voluptatem doloribus nostrum quasi hic aliquam dolor beatae sapiente fuga, modi illum ex veritatis accusamus placeat numquam recusandae culpa? Culpa corrupti totam nulla vitae autem.
+        Nostrum accusantium repellendus obcaecati aperiam. Ducimus perferendis, inventore provident tempora, praesentium at, laudantium ratione nemo aut alias nisi culpa et repudiandae molestiae fuga atque eveniet recusandae! Ipsum numquam illo omnis?
+        Nobis amet, eligendi dignissimos culpa eius laudantium voluptas quos accusantium natus quas reiciendis, earum cupiditate provident corporis! Delectus, quas harum beatae, rerum eum ipsam tenetur at quia, quae nobis impedit!</p>
+    </section>
+    <section>
+        <h1>제목</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni ea ullam corrupti! Quia autem impedit necessitatibus earum soluta! Suscipit consequatur ipsa ullam neque voluptatum perferendis quod. Maiores, nemo et.
+        Quam nobis aut deleniti. Illo unde voluptates dignissimos omnis quasi nulla magnam odio saepe quo, praesentium debitis corrupti consectetur fuga reprehenderit. Earum fugit tempore facilis architecto nihil praesentium eos enim?
+        Dolore beatae repellat vitae assumenda. Culpa quae tempore, in harum dolor placeat mollitia quidem quisquam sit aspernatur. Facere sed sunt nemo autem velit! Perspiciatis commodi deserunt similique? Odio, illo dolorem.
+        Consectetur, sequi est. Repellat blanditiis tempore odit ea nisi voluptatem, minima, placeat temporibus ullam asperiores voluptate eius atque dicta cum laborum? Cupiditate dolores earum quidem vitae incidunt, necessitatibus rerum veritatis.
+        Ullam vero corporis molestias, numquam officiis consequuntur nam eligendi voluptate ab deleniti! Inventore asperiores voluptatibus voluptas esse sequi dolor ea unde. Vero libero nisi ex consequuntur, non quod. Optio, eum?
+        Sequi eveniet at tempore id, iusto provident quo laboriosam error corrupti animi quos quaerat ex expedita? Odit aperiam enim tempora dolor saepe. Ducimus, necessitatibus reiciendis doloribus sapiente rem quam voluptatibus.
+        Animi voluptatibus quam doloribus maxime incidunt, odit quasi magnam, cumque quisquam, dolores ex nobis ut enim hic soluta a totam aliquam eligendi illo amet asperiores tenetur! Labore earum consectetur veniam!
+        Fugit aliquam recusandae architecto! Natus voluptatem doloribus nostrum quasi hic aliquam dolor beatae sapiente fuga, modi illum ex veritatis accusamus placeat numquam recusandae culpa? Culpa corrupti totam nulla vitae autem.
+        Nostrum accusantium repellendus obcaecati aperiam. Ducimus perferendis, inventore provident tempora, praesentium at, laudantium ratione nemo aut alias nisi culpa et repudiandae molestiae fuga atque eveniet recusandae! Ipsum numquam illo omnis?
+        Nobis amet, eligendi dignissimos culpa eius laudantium voluptas quos accusantium natus quas reiciendis, earum cupiditate provident corporis! Delectus, quas harum beatae, rerum eum ipsam tenetur at quia, quae nobis impedit!</p>
+    </section>
+    <section>
+        <h1>제목</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni ea ullam corrupti! Quia autem impedit necessitatibus earum soluta! Suscipit consequatur ipsa ullam neque voluptatum perferendis quod. Maiores, nemo et.
+        Quam nobis aut deleniti. Illo unde voluptates dignissimos omnis quasi nulla magnam odio saepe quo, praesentium debitis corrupti consectetur fuga reprehenderit. Earum fugit tempore facilis architecto nihil praesentium eos enim?
+        Dolore beatae repellat vitae assumenda. Culpa quae tempore, in harum dolor placeat mollitia quidem quisquam sit aspernatur. Facere sed sunt nemo autem velit! Perspiciatis commodi deserunt similique? Odio, illo dolorem.
+        Consectetur, sequi est. Repellat blanditiis tempore odit ea nisi voluptatem, minima, placeat temporibus ullam asperiores voluptate eius atque dicta cum laborum? Cupiditate dolores earum quidem vitae incidunt, necessitatibus rerum veritatis.
+        Ullam vero corporis molestias, numquam officiis consequuntur nam eligendi voluptate ab deleniti! Inventore asperiores voluptatibus voluptas esse sequi dolor ea unde. Vero libero nisi ex consequuntur, non quod. Optio, eum?
+        Sequi eveniet at tempore id, iusto provident quo laboriosam error corrupti animi quos quaerat ex expedita? Odit aperiam enim tempora dolor saepe. Ducimus, necessitatibus reiciendis doloribus sapiente rem quam voluptatibus.
+        Animi voluptatibus quam doloribus maxime incidunt, odit quasi magnam, cumque quisquam, dolores ex nobis ut enim hic soluta a totam aliquam eligendi illo amet asperiores tenetur! Labore earum consectetur veniam!
+        Fugit aliquam recusandae architecto! Natus voluptatem doloribus nostrum quasi hic aliquam dolor beatae sapiente fuga, modi illum ex veritatis accusamus placeat numquam recusandae culpa? Culpa corrupti totam nulla vitae autem.
+        Nostrum accusantium repellendus obcaecati aperiam. Ducimus perferendis, inventore provident tempora, praesentium at, laudantium ratione nemo aut alias nisi culpa et repudiandae molestiae fuga atque eveniet recusandae! Ipsum numquam illo omnis?
+        Nobis amet, eligendi dignissimos culpa eius laudantium voluptas quos accusantium natus quas reiciendis, earum cupiditate provident corporis! Delectus, quas harum beatae, rerum eum ipsam tenetur at quia, quae nobis impedit!</p>
+    </section>
+    <section>
+        <h1>제목</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni ea ullam corrupti! Quia autem impedit necessitatibus earum soluta! Suscipit consequatur ipsa ullam neque voluptatum perferendis quod. Maiores, nemo et.
+        Quam nobis aut deleniti. Illo unde voluptates dignissimos omnis quasi nulla magnam odio saepe quo, praesentium debitis corrupti consectetur fuga reprehenderit. Earum fugit tempore facilis architecto nihil praesentium eos enim?
+        Dolore beatae repellat vitae assumenda. Culpa quae tempore, in harum dolor placeat mollitia quidem quisquam sit aspernatur. Facere sed sunt nemo autem velit! Perspiciatis commodi deserunt similique? Odio, illo dolorem.
+        Consectetur, sequi est. Repellat blanditiis tempore odit ea nisi voluptatem, minima, placeat temporibus ullam asperiores voluptate eius atque dicta cum laborum? Cupiditate dolores earum quidem vitae incidunt, necessitatibus rerum veritatis.
+        Ullam vero corporis molestias, numquam officiis consequuntur nam eligendi voluptate ab deleniti! Inventore asperiores voluptatibus voluptas esse sequi dolor ea unde. Vero libero nisi ex consequuntur, non quod. Optio, eum?
+        Sequi eveniet at tempore id, iusto provident quo laboriosam error corrupti animi quos quaerat ex expedita? Odit aperiam enim tempora dolor saepe. Ducimus, necessitatibus reiciendis doloribus sapiente rem quam voluptatibus.
+        Animi voluptatibus quam doloribus maxime incidunt, odit quasi magnam, cumque quisquam, dolores ex nobis ut enim hic soluta a totam aliquam eligendi illo amet asperiores tenetur! Labore earum consectetur veniam!
+        Fugit aliquam recusandae architecto! Natus voluptatem doloribus nostrum quasi hic aliquam dolor beatae sapiente fuga, modi illum ex veritatis accusamus placeat numquam recusandae culpa? Culpa corrupti totam nulla vitae autem.
+        Nostrum accusantium repellendus obcaecati aperiam. Ducimus perferendis, inventore provident tempora, praesentium at, laudantium ratione nemo aut alias nisi culpa et repudiandae molestiae fuga atque eveniet recusandae! Ipsum numquam illo omnis?
+        Nobis amet, eligendi dignissimos culpa eius laudantium voluptas quos accusantium natus quas reiciendis, earum cupiditate provident corporis! Delectus, quas harum beatae, rerum eum ipsam tenetur at quia, quae nobis impedit!</p>
+    </section>
+    <section>
+        <h1>제목</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni ea ullam corrupti! Quia autem impedit necessitatibus earum soluta! Suscipit consequatur ipsa ullam neque voluptatum perferendis quod. Maiores, nemo et.
+        Quam nobis aut deleniti. Illo unde voluptates dignissimos omnis quasi nulla magnam odio saepe quo, praesentium debitis corrupti consectetur fuga reprehenderit. Earum fugit tempore facilis architecto nihil praesentium eos enim?
+        Dolore beatae repellat vitae assumenda. Culpa quae tempore, in harum dolor placeat mollitia quidem quisquam sit aspernatur. Facere sed sunt nemo autem velit! Perspiciatis commodi deserunt similique? Odio, illo dolorem.
+        Consectetur, sequi est. Repellat blanditiis tempore odit ea nisi voluptatem, minima, placeat temporibus ullam asperiores voluptate eius atque dicta cum laborum? Cupiditate dolores earum quidem vitae incidunt, necessitatibus rerum veritatis.
+        Ullam vero corporis molestias, numquam officiis consequuntur nam eligendi voluptate ab deleniti! Inventore asperiores voluptatibus voluptas esse sequi dolor ea unde. Vero libero nisi ex consequuntur, non quod. Optio, eum?
+        Sequi eveniet at tempore id, iusto provident quo laboriosam error corrupti animi quos quaerat ex expedita? Odit aperiam enim tempora dolor saepe. Ducimus, necessitatibus reiciendis doloribus sapiente rem quam voluptatibus.
+        Animi voluptatibus quam doloribus maxime incidunt, odit quasi magnam, cumque quisquam, dolores ex nobis ut enim hic soluta a totam aliquam eligendi illo amet asperiores tenetur! Labore earum consectetur veniam!
+        Fugit aliquam recusandae architecto! Natus voluptatem doloribus nostrum quasi hic aliquam dolor beatae sapiente fuga, modi illum ex veritatis accusamus placeat numquam recusandae culpa? Culpa corrupti totam nulla vitae autem.
+        Nostrum accusantium repellendus obcaecati aperiam. Ducimus perferendis, inventore provident tempora, praesentium at, laudantium ratione nemo aut alias nisi culpa et repudiandae molestiae fuga atque eveniet recusandae! Ipsum numquam illo omnis?
+        Nobis amet, eligendi dignissimos culpa eius laudantium voluptas quos accusantium natus quas reiciendis, earum cupiditate provident corporis! Delectus, quas harum beatae, rerum eum ipsam tenetur at quia, quae nobis impedit!</p>
+    </section>
+    <section>
+        <h1>제목</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum magni ea ullam corrupti! Quia autem impedit necessitatibus earum soluta! Suscipit consequatur ipsa ullam neque voluptatum perferendis quod. Maiores, nemo et.
+        Quam nobis aut deleniti. Illo unde voluptates dignissimos omnis quasi nulla magnam odio saepe quo, praesentium debitis corrupti consectetur fuga reprehenderit. Earum fugit tempore facilis architecto nihil praesentium eos enim?
+        Dolore beatae repellat vitae assumenda. Culpa quae tempore, in harum dolor placeat mollitia quidem quisquam sit aspernatur. Facere sed sunt nemo autem velit! Perspiciatis commodi deserunt similique? Odio, illo dolorem.
+        Consectetur, sequi est. Repellat blanditiis tempore odit ea nisi voluptatem, minima, placeat temporibus ullam asperiores voluptate eius atque dicta cum laborum? Cupiditate dolores earum quidem vitae incidunt, necessitatibus rerum veritatis.
+        Ullam vero corporis molestias, numquam officiis consequuntur nam eligendi voluptate ab deleniti! Inventore asperiores voluptatibus voluptas esse sequi dolor ea unde. Vero libero nisi ex consequuntur, non quod. Optio, eum?
+        Sequi eveniet at tempore id, iusto provident quo laboriosam error corrupti animi quos quaerat ex expedita? Odit aperiam enim tempora dolor saepe. Ducimus, necessitatibus reiciendis doloribus sapiente rem quam voluptatibus.
+        Animi voluptatibus quam doloribus maxime incidunt, odit quasi magnam, cumque quisquam, dolores ex nobis ut enim hic soluta a totam aliquam eligendi illo amet asperiores tenetur! Labore earum consectetur veniam!
+        Fugit aliquam recusandae architecto! Natus voluptatem doloribus nostrum quasi hic aliquam dolor beatae sapiente fuga, modi illum ex veritatis accusamus placeat numquam recusandae culpa? Culpa corrupti totam nulla vitae autem.
+        Nostrum accusantium repellendus obcaecati aperiam. Ducimus perferendis, inventore provident tempora, praesentium at, laudantium ratione nemo aut alias nisi culpa et repudiandae molestiae fuga atque eveniet recusandae! Ipsum numquam illo omnis?
+        Nobis amet, eligendi dignissimos culpa eius laudantium voluptas quos accusantium natus quas reiciendis, earum cupiditate provident corporis! Delectus, quas harum beatae, rerum eum ipsam tenetur at quia, quae nobis impedit!</p>
+    </section>
+
+
+
+
+
+
+
+    <script>
+        let scrollTop = 0;
+        let bar;
+        
+        window.onload = function(){
+            bar = document.getElementsByClassName('bar')[0];
+        }
+        window.addEventListener("scroll", function(e){
+            scrollTop = document.documentElement.scrollTop;
+            // console.log("스크롤값 : " + scrollTop);
+            let per = Math.round(scrollTop / (document.body.scrollHeight - window.outerHeight) * 100);
+            //window.outerHeight 를 뻬줘야 상단바가 끝까지 땡겨짐
+            console.log(per);
+
+            bar.style.height = per + '%';
+
+        },false)
+
+        
+    </script>
+</body>
+</html>

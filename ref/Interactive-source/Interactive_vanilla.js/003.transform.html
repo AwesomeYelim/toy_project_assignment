@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            position: relative;
+            background-color: black;
+            cursor: none;
+        }
+        h1{
+            color: #fff;
+        }
+        .cusor_item{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<h1>test</h1>
+<div class="cusor_item"></div>
+<script>
+        let cusor_item;
+        let h1;
+        let x = 0;
+        let y = 0;
+        let mx = 0;
+        let my = 0;
+        let speed =0.09;
+
+        //window.onload 는 화면이 다 로딩된후에 실행하라는 뜻
+        window.onload = function() {
+            
+            h1 = document.getElementsByTagName("h1")[0];   
+            cusor_item = document.getElementsByClassName("cusor_item")[0];   
+            window.addEventListener('mousemove', mouseFunc, false);
+    
+            function mouseFunc(e) {
+                x = e.clientX;
+                y = e.clientY;
+
+                // console.log(e.clientX, e.clientY);
+            }
+            loop();
+        }
+        
+        function loop(){
+            // console.log(x);
+            mx += (x - mx) * speed;
+            my += (y - my) * speed;
+            // console.log(x, mx)
+
+            h1.innerHTML ='x: ' + x + " mx: " + mx;
+            
+            cusor_item.style.transform = "translate("+ mx +"px,"+ my + "px)"
+            window.requestAnimationFrame(loop);
+            
+        }
+
+    </script>
+</body>
+</html>

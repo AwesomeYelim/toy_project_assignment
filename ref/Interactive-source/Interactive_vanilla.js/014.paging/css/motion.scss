@@ -1,0 +1,82 @@
+
+body {
+    background : #222;
+    overflow: hidden;
+    main {
+        position: relative;
+        background-color: red;
+    }
+}
+
+.textWrap {
+    position: fixed;
+    top: 50%;
+    left:50%;
+    width: 200px;
+    transform : translate(-50%, -50%);
+    z-index: 100;
+    background: #000;
+    text-align : center;
+    overflow: hidden;
+    h1 {
+        color : #fff;
+        transform: translate(0, -200%);
+        transition : all .3s ease-out;
+
+        &.active {
+            transform : translate(0,0);
+        }
+    }
+}
+.contentWrap {
+    position : fixed;
+    top: 50%;
+    left:50%;
+    width: 420px;
+    transform : translate(-50%, -50%) rotate(-25deg);
+    visibility: hidden;
+
+    &.active {
+        visibility: visible;
+    }
+
+    img {
+        width: 200px;
+        transition : all .8s cubic-bezier(0.860, 0.005, 0.310, 0.995);
+        opacity: 0;
+
+        &.img0 {
+            transform: translate(-300%,0);
+            transition-delay: .1s;
+        }
+        &.img1 {
+            transform: translate(0,-300%);
+            transition-delay: .18s;
+        }
+        &.img2 {
+            transform: translate(0, 300%);
+            transition-delay: .26s;
+        }
+        &.img3 {
+            transform: translate(300%, 0);
+            transition-delay: .3s;
+        }
+
+        &.active {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+}
+
+.buttonWrap {
+    position: fixed;
+    bottom : 50px;
+    left: 50%;
+    transform: translate(-50% , 0);
+    button {
+        padding: 10px 40px;
+        background : #fff;
+        font-size : 20px;
+    }
+}
